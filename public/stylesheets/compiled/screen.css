@@ -440,16 +440,16 @@ body.three-col #header, body.three-col #footer {
 body.three-col #sidebar {
   display: inline;
   float: left;
-  margin-right: 10px;
+  margin-right: 0;
   width: 310px; }
   /* line 101, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-col #sidebar {
     overflow-x: hidden; }
-/* line 35, ../../../app/stylesheets/screen.sass */
+/* line 36, ../../../app/stylesheets/screen.sass */
 body.three-col #content {
   display: inline;
   float: left;
-  margin-right: 0;
+  margin-right: 10px;
   width: 630px; }
   /* line 101, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-col #content {

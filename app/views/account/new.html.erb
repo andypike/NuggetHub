@@ -1,0 +1,5 @@
+<% content_for(:title) do %>Join<% end %>
+
+<%= render :partial => '/shared/user_form', :locals => {
+        :url => { :action => "create" }
+} %>
