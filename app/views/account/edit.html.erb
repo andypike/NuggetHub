@@ -1,1 +1,5 @@
-This is the edit account page
+<% content_for(:title) do %>Edit Account<% end %>
+
+<%= render :partial => '/shared/user_form', :locals => {
+        :url => { :action => "update" }
+} %>

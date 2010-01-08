@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 describe AccountController do
-  before(:each) do
-    @user = User.new
-    @user.full_name = "Andy Pike"
-    User.expects(:new).returns @user
-  end
   
   context "GET new" do
+    before(:each) do
+      @user = mock()
+      User.expects(:new).returns @user
+    end
+
     it "should be successful" do
       get :new
 
@@ -23,8 +23,14 @@ describe AccountController do
   end
 
   context 'POST create' do
+    before(:each) do
+      @user = mock()
+      User.expects(:new).returns @user
+    end
+
     it "should save a new user, set the flash message and redirect to the root url" do
       @user.expects(:save).returns(true)
+      @user.expects(:full_name).returns("Andy Pike")
 
       post :create
 
@@ -38,6 +44,57 @@ describe AccountController do
       post :create
 
       response.should render_template("account/new.html.erb")
+    end
+  end
+
+  context 'GET edit' do
+    before(:each) do
+      @current_user = mock()
+      @controller.stubs(:current_user).returns(@current_user)
+    end
+
+    it "should be successful" do
+      get :edit
+
+      response.should be_success
+      response.should render_template("account/edit.html.erb")
+    end
+
+    it "should assign the current user" do
+      get :edit
+
+      assigns[:user].should == @current_user
+    end
+  end
+
+  context 'POST update' do
+    before(:each) do
+      @current_user = mock()
+      @params = { :user => mock() }
+      @controller.stubs(:current_user).returns(@current_user)
+    end
+
+    it "should update the current user's properties from those posted" do
+      @current_user.expects(:update_attributes).with(@params[:user]).returns(true)
+
+      post :update, @params
+    end
+
+    it "should add a success message to the flash and redirect back to the site root if the update was successful" do
+      @current_user.stubs(:update_attributes).with(@params[:user]).returns(true)
+
+      post :update, @params
+
+      flash[:notice].should == "Your account was successfully updated."
+      response.should redirect_to(root_path)
+    end
+
+    it "should render the edit action if the update fails" do
+      @current_user.stubs(:update_attributes).with(@params[:user]).returns(false)
+
+      post :update, @params
+      
+      response.should render_template("account/edit.html.erb")
     end
   end
 end

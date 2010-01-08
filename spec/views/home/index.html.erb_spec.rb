@@ -75,7 +75,7 @@ describe "/home/index" do
     end
 
     it "should show a profile link" do
-      response.should have_tag('a[href=?]', '/profile')
+      response.should have_tag('a[href=?]', '/account/current/edit')
     end
 
     it "should show the users gravatar image" do
