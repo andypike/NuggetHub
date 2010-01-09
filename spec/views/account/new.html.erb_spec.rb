@@ -13,6 +13,7 @@ describe "/account/new" do
       response.should have_tag('input#user_email')
       response.should have_tag('input#user_password')
       response.should have_tag('input#user_password_confirmation')
+      response.should have_tag('input#user_submit[value=?]', 'Join')
     end
   end
 end

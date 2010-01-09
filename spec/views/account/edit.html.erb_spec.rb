@@ -13,6 +13,7 @@ describe "/account/edit" do
       response.should have_tag('input#user_email')
       response.should have_tag('input#user_password')
       response.should have_tag('input#user_password_confirmation')
+      response.should have_tag('input#user_submit[value=?]', 'Save Changes')      
     end
   end
 end
