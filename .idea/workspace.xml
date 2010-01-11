@@ -24,15 +24,6 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_sidebar.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/layout/_sidebar.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="25" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_header.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/layout/_header.sass">
           <provider selected="true" editor-type-id="text-editor">
@@ -69,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="what_is_nuggethub.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="what_is_nuggethub.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/help/what_is_nuggethub.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="30" selection-start="58" selection-end="58" vertical-scroll-proportion="-0.84">
+            <state line="0" column="46" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,10 +78,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="54" selection-start="868" selection-end="868" vertical-scroll-proportion="0.35783365">
+            <state line="22" column="30" selection-start="931" selection-end="931" vertical-scroll-proportion="-9.08">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/account/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="49" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/controllers/help_controller_spec.rb" />
         <option value="$PROJECT_DIR$/spec/views/help/what_is_nuggethub.html.erb_spec.rb" />
         <option value="$PROJECT_DIR$/app/controllers/help_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -140,9 +139,10 @@
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/stylesheets/partials/_layout.sass" />
         <option value="$PROJECT_DIR$/app/views/shared/_user_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/help/what_is_nuggethub.html.erb" />
         <option value="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/account/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/what_is_nuggethub.html.erb" />
       </list>
     </option>
   </component>
@@ -1025,13 +1025,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_base.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/stylesheets/ie.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1116,13 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/help/what_is_nuggethub.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="30" selection-start="58" selection-end="58" vertical-scroll-proportion="-0.84">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/user_sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="3" selection-start="47" selection-end="47" vertical-scroll-proportion="-1.68">
@@ -1132,7 +1118,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="54" selection-start="868" selection-end="868" vertical-scroll-proportion="0.35783365">
+        <state line="22" column="30" selection-start="931" selection-end="931" vertical-scroll-proportion="-9.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/account/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="49" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/what_is_nuggethub.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="46" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

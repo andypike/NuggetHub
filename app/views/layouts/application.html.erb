@@ -20,7 +20,7 @@
           <%= link_to "What is NuggetHub?", :controller => 'help', :action => 'what_is_nuggethub' %> |
           <%= link_to "Latest Nuggets", root_path %> |
           <% if current_user %>
-            <%= link_to "Account", edit_account_path(:current) %> |
+            <%= link_to "Your Account", edit_account_path(:current) %> |
             <%= link_to "Logout", logout_path %>
           <% else %>
             <%= link_to "Join", new_account_path  %> |

@@ -1,5 +1,6 @@
-<% content_for(:title) do %>Edit Your Account<% end %>
+<% content_for(:title) do %>Your Account<% end %>
 
+<h1>Your Account</h1>
 <%= render :partial => '/shared/user_form', :locals => {
         :url => { :action => "update" },
         :button_text => 'Save Changes'
