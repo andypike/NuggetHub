@@ -16,10 +16,12 @@ class AccountController < ApplicationController
 
   def edit
     @user = current_user
+    unauthorized! if cannot? :update, @user
   end
 
   def update
     @user = current_user
+    unauthorized! if cannot? :update, @user
     
     if @user.update_attributes(params[:user])
       flash[:notice] = 'Your account was successfully updated.'
