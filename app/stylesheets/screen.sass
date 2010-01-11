@@ -7,6 +7,9 @@
 // Import the non-default scaffolding module.
 @import blueprint/modules/scaffolding.sass
 
+!header_margin = 10px
+!background_colour = #313233
+
 // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
 // +blueprint
 
@@ -17,6 +20,8 @@ body.bp
   +blueprint-utilities
   +blueprint-debug
   +blueprint-interaction
+
+  background = !background_colour
   // Remove the scaffolding when you're ready to start doing visual design.
   // Or leave it in if you're happy with how blueprint looks out-of-the-box
 form.bp
@@ -26,15 +31,30 @@ form.bp
 body.three-col
   #container
     +container
+  #header
+    background-image = url(../../images/header-bg.gif)
+    height = 67px
   #header, #footer
     +column(!blueprint_grid_columns)
   #sidebar
-    // One third of the grid columns, rounding down. With 24 cols, this is 8.
-    !sidebar_columns = floor(!blueprint_grid_columns / 3)
+    //950px wide, 24 cols = 40px per col. Sidebar 7 cols
+    // One third of the grid columns, rounding down. With 24 cols, this is 8. //floor(!blueprint_grid_columns / 3)
+    !sidebar_columns = 7
     // true means it's the last column in the row
     +column(!sidebar_columns, true)
+    background-color = #eaeaea
+    margin-top = !header_margin
   #content
     // Two thirds of the grid columns, rounding up.
-    // With 24 cols, this is 16.
-    !content_columns = ceil(2 * !blueprint_grid_columns / 3)
+    // With 24 cols, this is 16. //ceil(2 * !blueprint_grid_columns / 3)
+    !content_columns = 17
     +column(!content_columns)
+    #content-top
+      background-image = url(../../images/content-top.gif)
+      height = 15px
+      margin-top = !header_margin
+    #content-body
+      background = #fff
+    #content-bottom
+      background-image = url(../../images/content-bottom.gif)
+      height = 15px

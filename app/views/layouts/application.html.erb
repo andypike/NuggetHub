@@ -27,11 +27,15 @@
       </div>
 
       <div id="content">
-        <%- flash.each do |name, msg| -%>
-            <%= content_tag :div, msg, :id => "flash_#{name}" %>
-        <%- end -%>
-        
-        <%= yield %>
+        <div id="content-top"></div>
+        <div id="content-body">
+            <%- flash.each do |name, msg| -%>
+                <%= content_tag :div, msg, :id => "flash_#{name}" %>
+            <%- end -%>
+
+            <%= yield %>
+        </div>
+        <div id="content-bottom"></div>
       </div>
 
       <div id="sidebar">

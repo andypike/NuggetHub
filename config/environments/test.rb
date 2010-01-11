@@ -30,3 +30,4 @@ config.action_mailer.delivery_method = :test
 config.gem 'rspec-rails', :lib => false
 config.gem 'rspec',	:lib => false
 config.gem 'mocha'
+config.gem 'relevance-rcov', :source => "http://gems.github.com", :lib => "rcov"
