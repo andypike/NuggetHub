@@ -1,6 +1,7 @@
 <% content_for(:title) do %>Login<% end %>
 
-<% form_for @user_session do |f| %>
+<h1>Login</h1>
+<% form_for @user_session, :html => {:class => 'bp'} do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :username %><br />
@@ -13,5 +14,5 @@
   <p>
     <%= f.check_box :remember_me %><%= f.label :remember_me %>
   </p>
-  <p><%= f.submit "Submit" %></p>
+  <p class="last-vertical-block"><%= f.submit "Submit" %></p>
 <% end %>

@@ -1,0 +1,20 @@
+@import layout/header.sass
+@import layout/footer.sass
+@import layout/sidebar.sass
+@import layout/content.sass
+
++blueprint-typography("body.bp")
++blueprint-scaffolding("body.bp")
+
+body.bp
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  background: #313233
+
+body.three-col
+  #container
+    +container
+
+  .last-vertical-block
+    margin-bottom: 0

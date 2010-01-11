@@ -1,8 +1,4 @@
 <% content_for(:title) do %>NuggetHub - Social knowledge base<% end %>
 
-<h1>NuggetHub is a social knowledge base that allows you to share your tips and learn from others.</h1>
-
-<% if !current_user %>
-    <%= link_to image_tag('buttons/join.gif'), new_account_path  %>
-    <%= link_to 'Login', login_path  %>
-<% end %>
+<h1>Latest Nuggets</h1>
+<p class="last-vertical-block">A list of latest nuggets will appear here once we have some ;o)</p>

@@ -16,7 +16,7 @@ describe "/home/index" do
     end  
 
     it "should show the site description" do
-      response.should have_tag('h1', 'NuggetHub is a social knowledge base that allows you to share your tips and learn from others.')
+      response.should have_tag('h2', 'NuggetHub is a social knowledge base that allows you to share your tips and learn from others.')
     end
 
     it "should show the homepage title" do
@@ -67,7 +67,7 @@ describe "/home/index" do
     end
 
     it "should show the current user's full name" do
-      response.should have_tag('span.current_user', 'Andy Pike')
+      response.should have_tag('span.current-user', 'Andy Pike')
     end
 
     it "should show a logout link" do

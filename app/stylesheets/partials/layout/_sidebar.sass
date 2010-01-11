@@ -1,0 +1,21 @@
+body.three-col
+  #sidebar
+    //7 out of the 24 columns, true means it's the last column in the row
+    +column(7, true)
+    .sidebar-top
+      background-image: url(../../images/sidebar-top.gif)
+      height: 15px
+      margin-top: 10px
+    .sidebar-body
+      background: #eaeaea
+      padding: 0 15px 0 15px
+      .gravatar
+        vertical-align: middle
+        margin-right: 5px
+      .current-user
+        color: #373957
+        font-size: 1.2em
+        font-weight: bold
+    .sidebar-bottom
+      background-image: url(../../images/sidebar-bottom.gif)
+      height: 15px

@@ -16,13 +16,16 @@
       <div id="header">
         <%= link_to image_tag("logo.gif", :id => 'logo'), root_path %>
 
-        <div id="user_details">
-            <% if current_user %>
-              <%= gravatar_for current_user %>
-                Logged in as: <span class="current_user"><%= current_user.full_name %></span> |
-              <%= link_to "Account", edit_account_path(:current) %> |
-              <%= link_to "Logout", logout_path %>
-            <% end %>
+        <div id="menu">
+          <%= link_to "What is NuggetHub?", :controller => 'help', :action => 'what_is_nuggethub' %> |
+          <%= link_to "Latest Nuggets", root_path %> |
+          <% if current_user %>
+            <%= link_to "Account", edit_account_path(:current) %> |
+            <%= link_to "Logout", logout_path %>
+          <% else %>
+            <%= link_to "Join", new_account_path  %> |
+            <%= link_to 'Login', login_path  %>
+          <% end %>
         </div>
       </div>
 
@@ -30,7 +33,7 @@
         <div id="content-top"></div>
         <div id="content-body">
             <%- flash.each do |name, msg| -%>
-                <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                <%= content_tag :div, msg, :id => "flash_#{name}", :class => "success" %>
             <%- end -%>
 
             <%= yield %>
@@ -39,11 +42,21 @@
       </div>
 
       <div id="sidebar">
-        sidebar
+        <div class="sidebar-top"></div>
+        <div class="sidebar-body">
+          <% if current_user %>
+            <%= gravatar_for current_user %>
+            <span class="current-user"><%= current_user.full_name %></span>
+          <% else %>
+            <h2>NuggetHub is a social knowledge base that allows you to share your tips and learn from others.</h2>
+            <%= link_to image_tag('buttons/join.gif'), new_account_path  %>
+          <% end %>
+        </div>
+        <div class="sidebar-bottom"></div>
       </div>
 
       <div id="footer">
-        footer
+        NuggetHub &copy;Copyright Andy Pike 2010. All rights reserved. 
       </div>
     </div>
   </body>
