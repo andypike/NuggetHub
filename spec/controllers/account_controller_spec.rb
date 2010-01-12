@@ -51,19 +51,29 @@ describe AccountController do
     before(:each) do
       @current_user = mock()
       @controller.stubs(:current_user).returns(@current_user)
+      @controller.stubs(:cannot?).returns(false)
     end
 
-    it "should be successful" do
+    it "should be successful if a user is logged in" do
       get :edit
 
       response.should be_success
       response.should render_template("account/edit.html.erb")
     end
 
-    it "should assign the current user" do
+    it "should assign the current user if a user is logged in" do
       get :edit
 
       assigns[:user].should == @current_user
+    end
+
+    it "should fail if a user is not logged in" do
+      @controller.stubs(:cannot?).returns(true)
+
+      get :edit
+
+      response.should_not be_success
+      response.should_not render_template("account/edit.html.erb")
     end
   end
 
@@ -72,6 +82,7 @@ describe AccountController do
       @current_user = mock()
       @params = { :user => mock() }
       @controller.stubs(:current_user).returns(@current_user)
+      @controller.stubs(:cannot?).returns(false)
     end
 
     it "should update the current user's properties from those posted" do
@@ -95,6 +106,14 @@ describe AccountController do
       post :update, @params
       
       response.should render_template("account/edit.html.erb")
+    end
+    
+    it "should fail if a user is not logged in" do
+      @controller.stubs(:cannot?).returns(true)
+
+      post :update, @params
+
+      response.should_not be_success
     end
   end
 end
