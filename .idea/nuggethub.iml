@@ -67,6 +67,24 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="cucumber-rails" version="0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/test.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="cucumber-rails" version="0.2.3" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/cucumber.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="database_cleaner" version="0.2.3" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/cucumber.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="formtastic" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environment.rb" />
@@ -110,6 +128,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="rspec" version="1.2.9" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/cucumber.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="rspec" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/test.rb" />
@@ -122,9 +146,21 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="rspec-rails" version="1.2.9" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/cucumber.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="webrat" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/test.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="webrat" version="0.6.0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/cucumber.rb" />
     </requirement>
     <requirement>
       <requirement>
@@ -169,6 +205,8 @@
     <orderEntry type="library" name="[gem] json_pure (v1.2.0, /Users/andy/.gem/ruby/1.8/gems/json_pure-1.2.0)" level="application" />
     <orderEntry type="library" name="[gem] nokogiri (v1.4.1, /Users/andy/.gem/ruby/1.8/gems/nokogiri-1.4.1)" level="application" />
     <orderEntry type="library" name="[gem] webrat (v0.6.0, /Users/andy/.gem/ruby/1.8/gems/webrat-0.6.0)" level="application" />
+    <orderEntry type="library" name="[gem] cucumber-rails (v0.2.3, /Users/andy/.gem/ruby/1.8/gems/cucumber-rails-0.2.3)" level="application" />
+    <orderEntry type="library" name="[gem] database_cleaner (v0.4.2, /Users/andy/.gem/ruby/1.8/gems/database_cleaner-0.4.2)" level="application" />
   </component>
 </module>
 
