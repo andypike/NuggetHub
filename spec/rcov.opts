@@ -1,4 +1,4 @@
 --exclude "spec/*,gems/*,rcov/*"
 --rails
 --text-report
---sort coverage
+--sort name
