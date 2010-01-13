@@ -67,15 +67,15 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="cucumber-rails" version="0" bound="GREATER_OR_EQUAL" />
-      </requirement>
-      <source from="config/environments/test.rb" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="cucumber-rails" version="0.2.3" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/cucumber.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="cucumber-rails" version="0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/test.rb" />
     </requirement>
     <requirement>
       <requirement>
@@ -140,19 +140,13 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rspec-rails" version="0" bound="GREATER_OR_EQUAL" />
-      </requirement>
-      <source from="config/environments/test.rb" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="rspec-rails" version="1.2.9" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/cucumber.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="webrat" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="rspec-rails" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/test.rb" />
     </requirement>
@@ -161,6 +155,12 @@
         <dependency name="webrat" version="0.6.0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/cucumber.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="webrat" version="0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/test.rb" />
     </requirement>
     <requirement>
       <requirement>
