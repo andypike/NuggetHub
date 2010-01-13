@@ -8,5 +8,5 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 require 'tasks/rails'
 
-#task :default => "spec:rcov"
-task :default => "db:test:clone" 
+task :default => "spec:rcov"
+#task :default => "db:test:clone"
