@@ -10,6 +10,9 @@ module NavigationHelpers
     
     when /the home\s?page/
       '/'
+    when /the new account page/
+      new_account_path
+
     when /the login page/
       login_path
 
