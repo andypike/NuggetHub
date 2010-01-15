@@ -4,7 +4,7 @@ Feature: Authenticate Users
   wants to be able to login
 
   Scenario: Successful login
-    Given I am the registered user andy.pike
+    Given I have an existing user account with the username of andy.pike
       And I am on the login page
     When I fill in "Username" with "andy.pike"
       And I fill in "Password" with "secret"
@@ -18,4 +18,9 @@ Feature: Authenticate Users
       And I fill in "Password" with "wrong password"
       And I press "Login"
     Then I should see "Username/Password combination is not valid"
+
+  Scenario: Successful logout
+    Given I am a logged in user
+    When I follow "Logout"
+    Then I should see "You have been successfully logged out."
 
