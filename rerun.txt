@@ -1,1 +1,1 @@
-
+/Users/andy/Documents/Ruby/nuggethub/features/manage_nuggets.feature:6

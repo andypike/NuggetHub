@@ -1,6 +1,6 @@
 Feature: Authenticate Users
   In order to be able to contribute to the site
-  a user
+  an account holder
   wants to be able to login
 
   Scenario: Successful login

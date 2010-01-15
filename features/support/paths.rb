@@ -10,11 +10,18 @@ module NavigationHelpers
     
     when /the home\s?page/
       '/'
+
+    when /the new nugget page/
+      new_nugget_path
+
     when /the new account page/
       new_account_path
 
     when /the login page/
       login_path
+
+    when /the edit current account page/
+      edit_account_path(:current)
 
     
     # Add more mappings here.

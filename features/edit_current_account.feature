@@ -1,6 +1,6 @@
 Feature: Edit current user account
   In order to keep their details up to date
-  a user
+  an account holder
   wants to be able to edit their account details
 
   Scenario Outline: Update the currently logged in user's details
@@ -27,3 +27,8 @@ Feature: Edit current user account
       | Andy Pike  | andy.pike  | someone@somewhere.com | secret   |                       | Password doesn't match confirmation             |
       | Andy Pike  | joe.bloggs | someone@somewhere.com | secret   | secret                | Username has already been taken                 |
       | Andy Pike  | andy.pike  | bo@selecta.com        | secret   | secret                | Email has already been taken                    |
+
+  Scenario: Disallow access if the user is not logged in
+    Given I am not a registered user
+    When I go to the edit current account page
+    Then I should see "You are unable to access this page"

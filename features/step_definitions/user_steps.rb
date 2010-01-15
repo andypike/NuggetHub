@@ -28,4 +28,3 @@ Given /^I am a logged in user$/ do
   fill_in("Password", :with => user.password)
   click_button("Login")
 end
-
