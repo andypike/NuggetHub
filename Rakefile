@@ -8,4 +8,4 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 require 'tasks/rails'
 
-task :default => ["spec:rcov"]
+task :default => ["spec:rcov", "cucumber"]
