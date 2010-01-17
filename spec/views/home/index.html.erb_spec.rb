@@ -3,8 +3,9 @@ require 'spec_helper'
 describe "/home/index" do
   before(:each) do
     activate_authlogic
-
-    assigns[:nuggets] = [Nugget.new(:title => "Sample Nugget title", :user => User.new(:email => "someone@somewhere.com"), :updated_at => DateTime.new)]
+    nugget = Nugget.new(:title => "Sample Nugget title", :user => User.new(:email => "someone@somewhere.com"), :updated_at => DateTime.new)
+    assigns[:nuggets] = [nugget]
+    template.stubs(:nugget_path).with(nugget).returns('nuggets/1')
   end
 
   context "when displaying the homepage to an unauthenticated user" do

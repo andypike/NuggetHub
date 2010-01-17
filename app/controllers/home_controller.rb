@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @nuggets = Nugget.all
+    @nuggets = Nugget.all(:order => "updated_at DESC")
   end
 end

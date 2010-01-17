@@ -5,11 +5,13 @@
 <div id="nuggets-list">
   <% @nuggets.each do |nugget| %>
     <div class="nugget">
-      <%= gravatar_for nugget.user, :size => 32 %>
-      <h3><%=h nugget.title %></h3>
-      <p><%=h relative_date(nugget.updated_at) %></p>
+      <%= gravatar_for nugget.user, :size => 42 %>
+      <div class="nugget-details">
+        <h3><%= link_to h(nugget.title), nugget_path(nugget) %></h3>
+        <div>Posted by <%=h nugget.user.username %> <%=h relative_date(nugget.updated_at) %></div>
+      </div>
     </div>
   <% end %>
 </div>
 
-<p class="last-vertical-block">.</p>
+<p class="last-vertical-block">&nbsp;</p>

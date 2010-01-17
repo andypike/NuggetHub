@@ -1,1 +1,1 @@
-features/edit_current_account.feature:31
+/Users/andy/Documents/Ruby/nuggethub/features/view_nuggets.feature:6

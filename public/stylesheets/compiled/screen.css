@@ -189,7 +189,7 @@ body.three-col #sidebar {
       color: #373957;
       font-size: 1.2em;
       font-weight: bold; }
-  /* line 19, ../../../app/stylesheets/partials/layout/_sidebar.sass */
+  /* line 20, ../../../app/stylesheets/partials/layout/_sidebar.sass */
   body.three-col #sidebar .sidebar-bottom {
     background-image: url(../../images/sidebar-bottom.gif);
     height: 15px; }
@@ -216,6 +216,28 @@ body.three-col #content {
   body.three-col #content #content-bottom {
     background-image: url(../../images/content-bottom.gif);
     height: 15px; }
+
+/* line 2, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col .nugget:hover {
+  background-image: url(../../images/nugget-bg-hover.gif); }
+/* line 4, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col .nugget {
+  background-image: url(../../images/nugget-bg.gif);
+  height: 55px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #a1b4c6; }
+  /* line 10, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  body.three-col .nugget .gravatar {
+    float: left; }
+  /* line 12, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  body.three-col .nugget .nugget-details {
+    width: 560px;
+    float: left;
+    margin-left: 10px; }
+    /* line 16, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+    body.three-col .nugget .nugget-details h3 {
+      display: inline; }
 
 /* line 22, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 body.bp {
@@ -423,7 +445,7 @@ body.bp hr.space {
   background: #fff;
   color: #fff; }
 
-/* line 9, ../../../app/stylesheets/partials/_layout.sass */
+/* line 10, ../../../app/stylesheets/partials/_layout.sass */
 body.bp {
   background: #313233; }
   /* line 9, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_utilities.sass */
@@ -516,7 +538,7 @@ body.bp {
     background: #990000;
     color: white; }
 
-/* line 16, ../../../app/stylesheets/partials/_layout.sass */
+/* line 17, ../../../app/stylesheets/partials/_layout.sass */
 body.three-col #container {
   width: 950px;
   margin: 0 auto;
@@ -525,6 +547,6 @@ body.three-col #container {
   /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.three-col #container {
     display: block; }
-/* line 19, ../../../app/stylesheets/partials/_layout.sass */
+/* line 20, ../../../app/stylesheets/partials/_layout.sass */
 body.three-col .last-vertical-block {
   margin-bottom: 0; }
