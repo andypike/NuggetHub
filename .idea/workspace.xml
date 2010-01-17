@@ -24,10 +24,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Rakefile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="29" selection-start="466" selection-end="466" vertical-scroll-proportion="0.41950646">
+            <state line="18" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_current_account.feature" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/features/edit_current_account.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="65" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.81433606">
               <folding />
             </state>
           </provider>
@@ -64,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/models/ability_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/ability.rb" />
         <option value="$PROJECT_DIR$/app/models/nugget.rb" />
         <option value="$PROJECT_DIR$/spec/models/nugget_spec.rb" />
@@ -80,6 +88,7 @@
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/spec/views/home/index.html.erb_spec.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
+        <option value="$PROJECT_DIR$/features/edit_current_account.feature" />
       </list>
     </option>
   </component>
@@ -525,7 +534,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -915,11 +924,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/user_sessions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="108" selection-end="335" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/nuggets_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="4" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" />
@@ -1002,7 +1006,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="466" selection-end="466" vertical-scroll-proportion="0.41950646">
+        <state line="18" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/edit_current_account.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="65" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.81433606">
           <folding />
         </state>
       </provider>

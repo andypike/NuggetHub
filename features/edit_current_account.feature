@@ -31,4 +31,4 @@ Feature: Edit current user account
   Scenario: Disallow access if the user is not logged in
     Given I am not a registered user
     When I go to the edit current account page
-    Then I should see "You are unable to access this page"
+    Then I should see "You are not authorized to access this page"
