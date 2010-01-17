@@ -3,11 +3,13 @@ require 'spec_helper'
 describe "/home/index" do
   before(:each) do
     activate_authlogic
+
+    assigns[:nuggets] = [Nugget.new(:title => "Sample Nugget title", :user => User.new(:email => "someone@somewhere.com"), :updated_at => DateTime.new)]
   end
 
   context "when displaying the homepage to an unauthenticated user" do
     before(:each) do
-      template.expects(:current_user).returns(nil).at_least_once
+      template.stubs(:current_user).returns(nil)
       render 'home/index', :layout => "application"
     end
 
@@ -41,8 +43,16 @@ describe "/home/index" do
       response.should_not have_tag('a[href=?]', '/profile')
     end
 
-    it "should not show a gravatar image" do
-      response.should_not have_tag('img.gravatar')
+    it "should not show a gravatar image within the sidebar" do
+      response.should_not have_tag('div.sidebar-body > img.gravatar')
+    end
+
+    it "should show the latest nuggets titles" do
+      response.should have_tag('h3', 'Sample Nugget title')
+    end
+
+    it "should show the latest nuggets gravatars" do
+      response.should have_tag('div#nuggets-list img.gravatar')
     end
   end
 

@@ -47,6 +47,7 @@
           <% if current_user %>
             <%= gravatar_for current_user %>
             <span class="current-user"><%= current_user.full_name %></span>
+            <%= link_to image_tag('buttons/add_nugget.gif', :title => "Add a Nugget"), new_nugget_path  %>
           <% else %>
             <h2>NuggetHub is a social knowledge base that allows you to share your tips and learn from others.</h2>
             <%= link_to image_tag('buttons/join.gif'), new_account_path  %>

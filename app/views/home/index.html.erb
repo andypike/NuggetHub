@@ -1,4 +1,15 @@
 <% content_for(:title) do %>NuggetHub - Social knowledge base<% end %>
 
 <h1>Latest Nuggets</h1>
-<p class="last-vertical-block">A list of latest nuggets will appear here once we have some ;o)</p>
+
+<div id="nuggets-list">
+  <% @nuggets.each do |nugget| %>
+    <div class="nugget">
+      <%= gravatar_for nugget.user, :size => 32 %>
+      <h3><%=h nugget.title %></h3>
+      <p><%=h relative_date(nugget.updated_at) %></p>
+    </div>
+  <% end %>
+</div>
+
+<p class="last-vertical-block">.</p>

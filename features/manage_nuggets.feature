@@ -10,3 +10,6 @@ Feature: Manage personal nuggets
       And I fill in "Body" with "CMD-Q"
       And I press "Post Nugget"
     Then I should see "Your Nugget was successfully posted"
+      And I should see "How to close an application on OSX"
+
+  
