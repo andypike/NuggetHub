@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "/nuggets/new" do
   before(:each) do
-    assigns[:nugget] = Nugget.new
+    assigns[:nugget] = Nugget.new(:body => "")
     render 'nuggets/new'
   end
 

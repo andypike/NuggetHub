@@ -1,0 +1,10 @@
+<% content_for(:title) do h @nugget.title end %>
+
+<h1><%=h @nugget.title %></h1>
+<p class="nugget-body"><%=h @nugget.body %></p>
+
+<div><%= gravatar_for @nugget.user, :size => 42 %></div>
+
+<div>By <%=h @nugget.user.username %></div>
+<div>Posted: <%=h relative_date(@nugget.updated_at) %></div>
+

@@ -27,4 +27,14 @@ describe Nugget do
     @valid_attributes[:user] = nil
     lambda { Nugget.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
   end
+
+  it "should not create a new instance if the body is longer than 2000 characters" do
+    @valid_attributes[:body] = Array.new(2001, "X").to_s
+    lambda { Nugget.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
+  end
+
+  it "should create a new instance if the body is 2000 characters" do
+    @valid_attributes[:body] = Array.new(2000, "X").to_s
+    Nugget.create!(@valid_attributes).should be_true
+  end
 end

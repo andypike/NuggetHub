@@ -1,8 +1,13 @@
 class NuggetsController < ApplicationController
   load_and_authorize_resource  
 
+  def show
+    @nugget = Nugget.find(params[:id])
+  end
+
   def new
     @nugget = Nugget.new
+    @nugget.body = ""
   end
 
   def create

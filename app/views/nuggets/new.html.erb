@@ -1,17 +1,22 @@
+<% content_for(:title) do %>Add Nugget<% end %>
+
 <h1>Add a new Nugget</h1>
 
-<% form_for(@nugget) do |f| %>
+<div class="add-nugget">
+<% form_for @nugget, :html => {:class => 'bp'} do |f| %>
   <%= f.error_messages %>
-
   <p>
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "title" %>
   </p>
   <p>
     <%= f.label :body %><br />
     <%= f.text_area :body %>
+    <em>Nuggets can only have a maximum of 2000 characters so get to the point ;o)</em>
+    <span id="char-count"><%= @nugget.body.size %> characters so far</span>
   </p>
   <p>
     <%= f.submit 'Post Nugget' %>
   </p>
 <% end %>
+</div>

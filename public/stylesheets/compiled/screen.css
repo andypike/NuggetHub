@@ -210,12 +210,8 @@ body.three-col #content {
     margin-top: 10px; }
   /* line 9, ../../../app/stylesheets/partials/layout/_content.sass */
   body.three-col #content #content-body {
-    background: #fff;
-    padding: 0 15px 0 15px; }
-  /* line 12, ../../../app/stylesheets/partials/layout/_content.sass */
-  body.three-col #content #content-bottom {
-    background-image: url(../../images/content-bottom.gif);
-    height: 15px; }
+    padding: 0 15px 20px 15px;
+    background: #fff url(../../images/content-bottom.gif) no-repeat 0 bottom; }
 
 /* line 2, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget:hover {
@@ -238,6 +234,25 @@ body.three-col .nugget {
     /* line 16, ../../../app/stylesheets/partials/layout/_nuggets.sass */
     body.three-col .nugget .nugget-details h3 {
       display: inline; }
+/* line 18, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col .nugget-body {
+  font-size: 1.4em; }
+/* line 21, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col .add-nugget textarea, body.three-col .add-nugget input.title {
+  width: 600px; }
+/* line 23, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col .add-nugget em {
+  color: #aaa; }
+/* line 25, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col .add-nugget span#char-count {
+  margin-left: 55px;
+  background: #ffff99;
+  border: solid 1px #ffcc66;
+  padding: 2px 7px; }
+
+/* line 1, ../../../app/stylesheets/partials/layout/_your-account.sass */
+.your-account form {
+  width: 300px; }
 
 /* line 22, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 body.bp {
@@ -445,7 +460,7 @@ body.bp hr.space {
   background: #fff;
   color: #fff; }
 
-/* line 10, ../../../app/stylesheets/partials/_layout.sass */
+/* line 11, ../../../app/stylesheets/partials/_layout.sass */
 body.bp {
   background: #313233; }
   /* line 9, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_utilities.sass */
@@ -538,7 +553,7 @@ body.bp {
     background: #990000;
     color: white; }
 
-/* line 17, ../../../app/stylesheets/partials/_layout.sass */
+/* line 18, ../../../app/stylesheets/partials/_layout.sass */
 body.three-col #container {
   width: 950px;
   margin: 0 auto;
@@ -547,6 +562,6 @@ body.three-col #container {
   /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.three-col #container {
     display: block; }
-/* line 20, ../../../app/stylesheets/partials/_layout.sass */
+/* line 21, ../../../app/stylesheets/partials/_layout.sass */
 body.three-col .last-vertical-block {
   margin-bottom: 0; }

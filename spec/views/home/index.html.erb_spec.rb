@@ -23,7 +23,7 @@ describe "/home/index" do
     end
 
     it "should show the homepage title" do
-      response.should have_tag('title', 'NuggetHub - Social knowledge base')
+      response.should have_tag('title', 'Home :: NuggetHub - Social knowledge base')
     end
 
     it "should show a join image button" do

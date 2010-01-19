@@ -1,16 +1,42 @@
 require 'spec_helper'
 
 describe NuggetsController do
+  before(:each) do
+    #Mock the authorization, but it must be called
+    authorization = mock
+    CanCan::ResourceAuthorization.stubs(:new).returns(authorization)
+    authorization.expects(:load_and_authorize_resource)
+  end
+  
+  context "GET show" do
+    before(:each) do
+      @params = {:id => 1}
+    end
+
+    it "should be successful" do
+      Nugget.stubs(:find).returns(mock)
+
+      get :show, @params
+
+      response.should be_success
+      response.should render_template("nuggets/show.html.erb")
+    end
+
+    it "should load the nugget and assign it" do
+      nugget = mock
+      Nugget.expects(:find).with('1').returns(nugget)
+
+      get :show, @params
+
+      assigns[:nugget].should == nugget
+    end
+  end
 
   context "GET new" do
     before(:each) do
       @nugget = mock
+      @nugget.stubs(:body=).returns(@nugget)
       Nugget.expects(:new).returns(@nugget)
-
-      #Mock the authorization, but it must be called
-      authorization = mock
-      CanCan::ResourceAuthorization.stubs(:new).returns(authorization)
-      authorization.expects(:load_and_authorize_resource)
     end
 
     it "should be successful" do
@@ -25,15 +51,15 @@ describe NuggetsController do
 
       assigns[:nugget].should == @nugget
     end
+
+    it "should set the body to an empty string by default to help the view" do
+      @nugget.expects(:body=).with("").returns(@nugget)
+      get :new
+    end
   end
 
   context "POST create" do
     before(:each) do
-      #Mock the authorization, but it must be called
-      authorization = mock
-      CanCan::ResourceAuthorization.stubs(:new).returns(authorization)
-      authorization.expects(:load_and_authorize_resource)
-
       @current_user = mock
       @nugget = mock
       @nugget_params = mock

@@ -33,4 +33,15 @@ describe Ability do
     end
   end
 
+  context "When checking a user's ability to view a nugget" do
+    it "should allow logged in users to view a nugget" do
+      ability = Ability.new(User.new)
+      ability.can?(:read, Nugget).should be_true
+    end
+
+    it "should allow a non-logged in user to view a nugget" do
+      ability = Ability.new(nil)
+      ability.can?(:read, Nugget).should be_true
+    end
+  end
 end
