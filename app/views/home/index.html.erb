@@ -1,7 +1,7 @@
 <% content_for(:title) do %>Home<% end %>
 
 <h1>Latest Nuggets</h1>
-
+<p><%= page_entries_info @nuggets %></p>
 <div id="nuggets-list">
   <% @nuggets.each do |nugget| %>
     <div class="nugget">
@@ -14,4 +14,4 @@
   <% end %>
 </div>
 
-<p class="last-vertical-block">&nbsp;</p>
+<%= will_paginate @nuggets %>

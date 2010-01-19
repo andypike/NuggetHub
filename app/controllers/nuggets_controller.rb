@@ -8,6 +8,7 @@ class NuggetsController < ApplicationController
   def new
     @nugget = Nugget.new
     @nugget.body = ""
+    @hide_add_nugget = true
   end
 
   def create

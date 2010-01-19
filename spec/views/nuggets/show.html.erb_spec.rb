@@ -9,8 +9,7 @@ describe "/nuggets/show" do
   context "When displaying the show nugget page" do
     it "should show the nugget details" do
       response.should have_tag('h1', 'Sample nugget title')
-      response.should have_tag('p', 'Sample nugget body')
-      response.should have_tag('div', 'By andypike')
+      response.should have_tag('div.nugget-body', 'Sample nugget body')
     end
   end
 end

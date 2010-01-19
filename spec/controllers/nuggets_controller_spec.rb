@@ -56,6 +56,12 @@ describe NuggetsController do
       @nugget.expects(:body=).with("").returns(@nugget)
       get :new
     end
+
+    it "should hide the add nugget button" do
+      get :new
+      
+      assigns[:hide_add_nugget].should == true
+    end
   end
 
   context "POST create" do

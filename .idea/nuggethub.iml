@@ -48,6 +48,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="bluecloth" version="0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="cancan" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source manual="true" />
@@ -129,19 +135,13 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rspec" version="1.2.9" bound="GREATER_OR_EQUAL" />
-      </requirement>
-      <source from="config/environments/cucumber.rb" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="rspec" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/test.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rspec-rails" version="1.2.9" bound="GREATER_OR_EQUAL" />
+        <dependency name="rspec" version="1.2.9" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/cucumber.rb" />
     </requirement>
@@ -153,7 +153,7 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="webrat" version="0.6.0" bound="GREATER_OR_EQUAL" />
+        <dependency name="rspec-rails" version="1.2.9" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/cucumber.rb" />
     </requirement>
@@ -162,6 +162,12 @@
         <dependency name="webrat" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environments/test.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="webrat" version="0.6.0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environments/cucumber.rb" />
     </requirement>
     <requirement>
       <requirement>
@@ -208,6 +214,7 @@
     <orderEntry type="library" name="[gem] cucumber-rails (v0.2.3, /Users/andy/.gem/ruby/1.8/gems/cucumber-rails-0.2.3)" level="application" />
     <orderEntry type="library" name="[gem] database_cleaner (v0.4.2, /Users/andy/.gem/ruby/1.8/gems/database_cleaner-0.4.2)" level="application" />
     <orderEntry type="library" name="[gem] cancan (v1.0.2, /Users/andy/.gem/ruby/1.8/gems/cancan-1.0.2)" level="application" />
+    <orderEntry type="library" name="[gem] bluecloth (v2.0.6, /Users/andy/.gem/ruby/1.8/gems/bluecloth-2.0.6)" level="application" />
   </component>
 </module>
 

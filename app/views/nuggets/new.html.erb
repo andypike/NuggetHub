@@ -10,9 +10,9 @@
     <%= f.text_field :title, :class => "title" %>
   </p>
   <p>
-    <%= f.label :body %><br />
+    <%= f.label :body %> <em>(You can format your Nugget using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">Markdown</a>)</em><br />
     <%= f.text_area :body %>
-    <em>Nuggets can only have a maximum of 2000 characters so get to the point ;o)</em>
+    <em>Nuggets can only have a maximum of <%= Nugget.MAX_LENGTH %> characters so get to the point ;o)</em>
     <span id="char-count"><%= @nugget.body.size %> characters so far</span>
   </p>
   <p>

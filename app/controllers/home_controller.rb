@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @nuggets = Nugget.all(:order => "updated_at DESC")
+    @nuggets = Nugget.paged_nuggets(params[:page])
   end
 end

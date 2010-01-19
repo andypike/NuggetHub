@@ -6,6 +6,8 @@ describe "/home/index" do
     nugget = Nugget.new(:title => "Sample Nugget title", :user => User.new(:email => "someone@somewhere.com"), :updated_at => DateTime.new)
     assigns[:nuggets] = [nugget]
     template.stubs(:nugget_path).with(nugget).returns('nuggets/1')
+    template.stubs(:page_entries_info).returns('')
+    template.stubs(:will_paginate).returns('')
   end
 
   context "when displaying the homepage to an unauthenticated user" do
