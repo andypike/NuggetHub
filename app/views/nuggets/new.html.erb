@@ -2,21 +2,4 @@
 
 <h1>Add a new Nugget</h1>
 
-<div class="add-nugget">
-<% form_for @nugget, :html => {:class => 'bp'} do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title, :class => "title" %>
-  </p>
-  <p>
-    <%= f.label :body %> <em>(You can format your Nugget using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">Markdown</a>)</em><br />
-    <%= f.text_area :body %>
-    <em>Nuggets can only have a maximum of <%= Nugget.MAX_LENGTH %> characters so get to the point ;o)</em>
-    <span id="char-count"><%= @nugget.body.size %> characters so far</span>
-  </p>
-  <p>
-    <%= f.submit 'Post Nugget' %>
-  </p>
-<% end %>
-</div>
+<%= render :partial => 'nugget_form' %>

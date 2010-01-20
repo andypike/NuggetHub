@@ -21,10 +21,10 @@ Given /^I am a logged in user$/ do
     "password" => "secret",
     "password_confirmation" => "secret"
   }
-  user = User.create!(params)
+  @user = User.create!(params)
 
   visit '/login'
-  fill_in("Username", :with => user.username)
-  fill_in("Password", :with => user.password)
+  fill_in("Username", :with => @user.username)
+  fill_in("Password", :with => @user.password)
   click_button("Login")
 end

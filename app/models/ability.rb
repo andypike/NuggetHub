@@ -17,6 +17,11 @@ class Ability
       can :create, Nugget do
         true
       end
+
+      #A user can only edit their own nuggets
+      can :update, Nugget do |nugget|
+        nugget && nugget.user == current_user
+      end
     end
   end
 end

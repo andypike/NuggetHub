@@ -12,4 +12,14 @@ Feature: Manage personal nuggets
     Then I should see "Your Nugget was successfully posted"
       And I should see "How to close an application on OSX"
 
-  
+  Scenario: Allow the current user to edit their own nuggets
+    Given I am a logged in user
+      And I am viewing a nugget that I have created
+    When I follow "Edit"
+      And I fill in "Title" with "Just edited the title"
+      And I press "Save changes"
+    Then I should see "Your Nugget was successfully updated"
+      And I should see "Just edited the title"
+
+    #TODO: Add check for user not logged in when trying to edit
+    #TODO: Add check for user logged in but not the owner when trying to edit

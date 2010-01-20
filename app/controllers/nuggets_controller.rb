@@ -22,4 +22,19 @@ class NuggetsController < ApplicationController
       render :action => 'new'
     end
   end
+
+  def edit
+    @nugget = Nugget.find(params[:id])
+  end
+
+  def update
+    @nugget = Nugget.find(params[:id])
+
+    if @nugget.update_attributes(params[:nugget])
+      flash[:notice] = 'Your Nugget was successfully updated.'
+      redirect_to root_url
+    else
+      render :action => 'edit'
+    end
+  end
 end

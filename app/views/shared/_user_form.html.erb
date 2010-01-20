@@ -12,8 +12,9 @@
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :email %><br />
+    <%= f.label :email %> <em>(This email is used to show your <a href="http://gravatar.com" target="_blank">Gravatar</a>)</em><br />
     <%= f.text_field :email %>
+
   </p>
   <p>
     <%= f.label :password %><br />
@@ -23,5 +24,5 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-  <p class="last-vertical-block"><%= f.submit button_text %></p>
+  <p><%= f.submit button_text %></p>
 <% end %>

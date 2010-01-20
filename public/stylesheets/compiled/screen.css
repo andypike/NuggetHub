@@ -265,13 +265,10 @@ body.three-col .nugget-info {
     vertical-align: middle;
     margin-right: 5px; }
 /* line 36, ../../../app/stylesheets/partials/layout/_nuggets.sass */
-body.three-col .add-nugget textarea, body.three-col .add-nugget input.title {
+body.three-col .nugget-form textarea, body.three-col .nugget-form input.title {
   width: 600px; }
 /* line 38, ../../../app/stylesheets/partials/layout/_nuggets.sass */
-body.three-col .add-nugget em {
-  color: #aaa; }
-/* line 40, ../../../app/stylesheets/partials/layout/_nuggets.sass */
-body.three-col .add-nugget span#char-count {
+body.three-col .nugget-form span#char-count {
   margin-left: 55px;
   background: #ffff99;
   border: solid 1px #ffcc66;
@@ -452,8 +449,11 @@ body.bp {
 /* line 10, ../../../app/stylesheets/partials/_layout.sass */
 body.bp {
   background: #313233; }
+  /* line 12, ../../../app/stylesheets/partials/_layout.sass */
+  body.bp em {
+    color: #aaa; }
 
-/* line 14, ../../../app/stylesheets/partials/_layout.sass */
+/* line 16, ../../../app/stylesheets/partials/_layout.sass */
 body.three-col #container {
   width: 950px;
   margin: 0 auto;
@@ -462,6 +462,6 @@ body.three-col #container {
   /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.three-col #container {
     display: block; }
-/* line 17, ../../../app/stylesheets/partials/_layout.sass */
+/* line 19, ../../../app/stylesheets/partials/_layout.sass */
 body.three-col .last-vertical-block {
   margin-bottom: 0; }

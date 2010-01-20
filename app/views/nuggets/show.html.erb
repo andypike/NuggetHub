@@ -6,6 +6,10 @@
 <div class="nugget-info">
   <%= gravatar_for @nugget.user, :size => 32 %>
   By: <strong><%=h @nugget.user.username %></strong> When: <strong><%=h relative_date(@nugget.updated_at) %></strong>
+
+  <% if can? :update, @nugget %>
+    <%= link_to "Edit Nugget", edit_nugget_path(@nugget), :class => 'edit' %>
+  <% end %>
 </div>
 
 

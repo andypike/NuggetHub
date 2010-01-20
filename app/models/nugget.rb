@@ -1,6 +1,6 @@
 class Nugget < ActiveRecord::Base
   def self.MAX_LENGTH
-    2000
+    1000
   end
 
   def self.per_page

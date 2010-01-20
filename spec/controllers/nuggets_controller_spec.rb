@@ -103,4 +103,55 @@ describe NuggetsController do
     end
   end
 
+  context "GET edit" do
+    before(:each) do
+      @params = { :id => 1}
+      @nugget = mock
+      Nugget.expects(:find).with('1').returns(@nugget)
+    end
+
+    it "should be successful" do
+      get :edit, @params
+
+      response.should be_success
+      response.should render_template("nuggets/edit.html.erb")
+    end
+
+    it "should assign the loaded nugget" do
+      get :edit, @params
+
+      assigns[:nugget].should == @nugget
+    end
+  end
+
+  context "POST update" do
+    before(:each) do
+      @nugget = mock
+      Nugget.expects(:find).with('1').returns(@nugget)
+      @params = { :id => 1, :nugget => mock }
+    end
+
+    it "should update the nugget's properties from those posted" do
+      @nugget.expects(:update_attributes).with(@params[:nugget]).returns(true)
+
+      post :update, @params
+    end
+
+    it "should add a success message to the flash and redirect back to the site root if the update was successful" do
+      @nugget.stubs(:update_attributes).with(@params[:nugget]).returns(true)
+
+      post :update, @params
+
+      flash[:notice].should == "Your Nugget was successfully updated."
+      response.should redirect_to(root_path)
+    end
+
+    it "should render the edit action if the update fails" do
+      @nugget.stubs(:update_attributes).with(@params[:nugget]).returns(false)
+
+      post :update, @params
+
+      response.should render_template("nuggets/edit.html.erb")
+    end
+  end
 end

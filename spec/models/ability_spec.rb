@@ -44,4 +44,26 @@ describe Ability do
       ability.can?(:read, Nugget).should be_true
     end
   end
+
+  context "When checking a user's ability to edit a nugget" do
+    before(:each) do
+      @user_that_owns_nugget = User.new
+      @nugget = Nugget.new(:title => "blah", :body => "blah", :user => @user_that_owns_nugget)
+    end
+
+    it "should allow a logged in user to edit their own nuggets" do
+      ability = Ability.new(@user_that_owns_nugget)
+      ability.can?(:update, @nugget).should be_true
+    end
+
+    it "should not allow a user to edit another user's nugget" do
+      ability = Ability.new(User.new)
+      ability.can?(:update, @nugget).should be_false
+    end
+
+    it "should not allow a non-logged in user to edit any nugget" do
+      ability = Ability.new(nil)
+      ability.can?(:update, @nugget).should be_false
+    end
+  end
 end
