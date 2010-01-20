@@ -253,21 +253,24 @@ body.three-col .nugget-body {
   margin-bottom: 10px;
   background: #efefef; }
   /* line 26, ../../../app/stylesheets/partials/layout/_nuggets.sass */
-  body.three-col .nugget-body p, body.three-col .nugget-body ul {
+  body.three-col .nugget-body p, body.three-col .nugget-body ul, body.three-col .nugget-body code {
     margin-bottom: 5px;
     font-size: 0.8em; }
-/* line 29, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 29, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  body.three-col .nugget-body pre {
+    margin: 10px; }
+/* line 31, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-info {
   background: #ffffcc;
   padding: 3px; }
-  /* line 32, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 34, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-info .gravatar {
     vertical-align: middle;
     margin-right: 5px; }
-/* line 36, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 38, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form textarea, body.three-col .nugget-form input.title {
   width: 600px; }
-/* line 38, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 40, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form span#char-count {
   margin-left: 55px;
   background: #ffff99;

@@ -23,80 +23,7 @@
   </component>
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="manage_nuggets.feature" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features/manage_nuggets.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="77" selection-start="1065" selection-end="1065" vertical-scroll-proportion="1.0391753">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_current_account.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/edit_current_account.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authenticate_users.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/authenticate_users.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_nuggets.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/view_nuggets.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nuggets_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/nuggets_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="61" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nuggets_controller_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/controllers/nuggets_controller_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="0" selection-start="4233" selection-end="4233" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/account_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="7" selection-start="486" selection-end="666" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account_controller_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/controllers/account_controller_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="7" selection-start="2260" selection-end="2861" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -118,13 +45,13 @@
         <option value="$PROJECT_DIR$/spec/views/nuggets/show.html.erb_spec.rb" />
         <option value="$PROJECT_DIR$/app/views/nuggets/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_user_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/stylesheets/partials/layout/_nuggets.sass" />
         <option value="$PROJECT_DIR$/app/stylesheets/partials/_layout.sass" />
         <option value="$PROJECT_DIR$/app/views/nuggets/_nugget_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/nuggets/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/nuggets_controller.rb" />
         <option value="$PROJECT_DIR$/spec/controllers/nuggets_controller_spec.rb" />
         <option value="$PROJECT_DIR$/features/manage_nuggets.feature" />
+        <option value="$PROJECT_DIR$/app/stylesheets/partials/layout/_nuggets.sass" />
       </list>
     </option>
   </component>
@@ -1169,13 +1096,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/layout/_nuggets.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="18" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/layout/_content.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1276,7 +1196,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/manage_nuggets.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="77" selection-start="1065" selection-end="1065" vertical-scroll-proportion="1.0391753">
+        <state line="12" column="59" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/layout/_nuggets.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="16" selection-start="640" selection-end="640" vertical-scroll-proportion="0.6969072">
           <folding />
         </state>
       </provider>
