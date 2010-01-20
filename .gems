@@ -5,3 +5,4 @@ formtastic --version 0.9.7
 haml --version 2.2.16
 compass --version 0.8.17
 bluecloth --version 2.0.6
+friendly_id --version 2.2.7

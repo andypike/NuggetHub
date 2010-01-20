@@ -3,6 +3,7 @@ class NuggetsController < ApplicationController
 
   def show
     @nugget = Nugget.find(params[:id])
+    redirect_to @nugget, :status => 301 if @nugget.has_better_id?
   end
 
   def new
