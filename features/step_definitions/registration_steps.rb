@@ -12,7 +12,7 @@ end
 And /^the email "([^\"]*)" is already in use$/ do |email|
   params = {
     "full_name" => "A user",
-    "username" => "another.user",
+    "username" => "another_user",
     "email" => email,
     "password" => "secret",
     "password_confirmation" => "secret"

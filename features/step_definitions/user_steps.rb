@@ -16,7 +16,7 @@ end
 Given /^I am a logged in user$/ do
   params = {
     "full_name" => "A user",
-    "username" => "test.user",
+    "username" => "test_user",
     "email" => "someone@somewhere.com",
     "password" => "secret",
     "password_confirmation" => "secret"

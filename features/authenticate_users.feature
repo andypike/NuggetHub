@@ -4,9 +4,9 @@ Feature: Authenticate Users
   wants to be able to login
 
   Scenario: Successful login
-    Given I have an existing user account with the username of andy.pike
+    Given I have an existing user account with the username of andy_pike
       And I am on the login page
-    When I fill in "Username" with "andy.pike"
+    When I fill in "Username" with "andy_pike"
       And I fill in "Password" with "secret"
       And I press "Login"
     Then I should see "Welcome back to NuggetHub."

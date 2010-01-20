@@ -1,7 +1,50 @@
-**NuggetHub**
+**What is NuggetHub?**
 
-A RoR social knowledge base web application.
+NuggetHub is a simple site for storing and sharing your little nuggets of information.
 
-This project is mainly for learning and gaining experience with RoR.
+Found out something interesting? Post it here and share with the world rather than waiting for someone to ask.
 
-You can contact me via Twitter if you have any questions, comments or suggestions: @andypike
+You create nuggets of information to share.
+
+Keep your nuggets safe for the next time you need them rather than trying to remember them.
+
+That's it! More features are coming all the time to enhance the site and make it more useful.
+
+**Why are you building NuggetHub?**
+
+Basically this is my first Ruby on Rails project and I wanted something to get my teeth into to learn all about RoR, the available Gems and all that jazz.
+
+I'm no Rails expert, so feel free to checkout the source and let me know what I'm doing wrong.
+
+You can get updates on Twitter so feel free to get in touch.
+
+**I've got an idea for NuggetHub, what to hear it?**
+
+Sure do, take a look at the feedback tab on the left or jump over to the UserVoice forum where you can submit your ideas and vote on others.
+
+**What have you used to create NuggetHub?**
+
+Here is a quick list of the tech I've used, I'll try and keep this up-to-date:
+
+    * Mac OSX 10.6.2
+    * Ruby 1.8.7
+    * Rails 2.3.5
+    * RubyMine
+    * Authlogic
+    * CanCan
+    * will_paginate
+    * Gravatar
+    * Formtastic
+    * Compass
+    * Sass
+    * Bluecloth
+    * Cucumber
+    * Webrat
+    * RSpec
+    * Mocha
+    * Relevance-rcov
+    * Git and GitHub
+    * RunCodeRun (see the build)
+    * Heroku
+    * Thanks to Railscasts.com, you rock!
+

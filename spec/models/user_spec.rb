@@ -5,7 +5,7 @@ describe User do
     @valid_attributes = {
       :full_name => "Andy Pike",
       :email => "someone@somewhere.com",
-      :username => "andy.pike",
+      :username => "andy_pike-78",
       :password => "a password",
       :password_confirmation => "a password"
     }
@@ -64,6 +64,21 @@ describe User do
 
     it "should raise an exception if the password and confirmation do not match" do
       @valid_attributes[:password_confirmation] = 'this is a mismatch'
+      lambda { User.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
+    end
+
+    it "should raise an exception if the username is less than 3 characters long" do
+      @valid_attributes[:username] = '12'
+      lambda { User.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
+    end
+
+    it "should raise an exception if the username is less than 16 characters long" do
+      @valid_attributes[:username] = '12345678901234567'
+      lambda { User.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
+    end
+
+    it "should raise an exception if the username contains characters other than letters, numbers, underscores and hyphens" do
+      @valid_attributes[:username] = 'ert&£:> blah'
       lambda { User.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
     end
   end
