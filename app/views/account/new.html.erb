@@ -1,6 +1,7 @@
 <% content_for(:title) do %>Join NuggetHub<% end %>
 
 <h1>Join NuggetHub</h1>
+<p>Already have an account? <%= link_to "You can login here", login_path %>.</p>
 <%= render :partial => '/shared/user_form', :locals => {
         :url => { :action => "create" },
         :button_text => 'Join'

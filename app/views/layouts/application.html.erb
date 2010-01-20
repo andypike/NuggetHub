@@ -51,13 +51,14 @@
             <%= link_to image_tag('buttons/add_nugget.gif', :title => "Add a Nugget"), new_nugget_path, :id => 'add_nugget' unless @hide_add_nugget  %>
           <% else %>
             <h2>NuggetHub is a social knowledge base that allows you to share your tips and learn from others.</h2>
+            <p>You create <a href="http://dictionary.reference.com/browse/nugget" target="_blank">nuggets of information</a> to share.</p>
             <%= link_to image_tag('buttons/join.gif'), new_account_path  %>
           <% end %>
         </div>
       </div>
 
       <div id="footer">
-        NuggetHub was brought to you by Andy Pike ;o) Check <a href="http://github.com/andypike/NuggetHub" target="_blank">the source code</a> and <a href="http://twitter.com/andypike" target="_blank">me on Twitter</a>.
+        NuggetHub is open source, check <a href="http://github.com/andypike/NuggetHub" target="_blank">the source code</a> and <a href="http://twitter.com/nuggethub" target="_blank">chat on Twitter</a>.
       </div>
     </div>
 

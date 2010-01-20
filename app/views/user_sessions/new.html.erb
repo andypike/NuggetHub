@@ -1,6 +1,7 @@
 <% content_for(:title) do %>Login<% end %>
 
 <h1>Login</h1>
+<p>Need an account? <%= link_to "You can sign up here", new_account_path %>.</p>
 <% form_for @user_session, :html => {:class => 'bp'} do |f| %>
   <%= f.error_messages %>
   <p>
