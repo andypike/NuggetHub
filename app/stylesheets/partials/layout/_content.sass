@@ -1,9 +1,16 @@
 body.three-col
-  .success
-    padding: 5px
-    background: #ccff99
-    border: solid 2px #33cc00
+  .success, .error
+    padding: 5px 30px
     margin-bottom: 10px
+    font-weight: bold
+  .success
+    background: #78cb2d url(../../images/success-bg.gif) no-repeat
+    border: solid 1px #518a1f
+    color: #000
+  .error
+    background: #cb3b2e url(../../images/error-bg.gif) no-repeat
+    border: solid 1px #8a281f
+    color: #fff
   #content
     //17 of the 24 columns
     +column(17)
