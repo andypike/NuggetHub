@@ -44,7 +44,6 @@
         <option value="$PROJECT_DIR$/app/controllers/nuggets_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/help/what_is_nuggethub.html.erb" />
         <option value="$PROJECT_DIR$/spec/controllers/nuggets_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/README.markdown" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
         <option value="$PROJECT_DIR$/features/register_new_account.feature" />
@@ -52,6 +51,7 @@
         <option value="$PROJECT_DIR$/features/step_definitions/user_steps.rb" />
         <option value="$PROJECT_DIR$/features/edit_current_account.feature" />
         <option value="$PROJECT_DIR$/features/authenticate_users.feature" />
+        <option value="$PROJECT_DIR$/README.markdown" />
       </list>
     </option>
   </component>
@@ -1144,13 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.markdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/help/what_is_nuggethub.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="4" selection-start="1837" selection-end="1837" vertical-scroll-proportion="-25.2">
@@ -1203,6 +1196,13 @@
     <entry file="file://$PROJECT_DIR$/features/authenticate_users.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="41" selection-start="301" selection-end="301" vertical-scroll-proportion="-0.1575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="8" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.625">
           <folding />
         </state>
       </provider>

@@ -26,25 +26,25 @@ Sure do, take a look at the feedback tab on the left or jump over to the UserVoi
 
 Here is a quick list of the tech I've used, I'll try and keep this up-to-date:
 
-    * Mac OSX 10.6.2
-    * Ruby 1.8.7
-    * Rails 2.3.5
-    * RubyMine
-    * Authlogic
-    * CanCan
-    * will_paginate
-    * Gravatar
-    * Formtastic
-    * Compass
-    * Sass
-    * Bluecloth
-    * Cucumber
-    * Webrat
-    * RSpec
-    * Mocha
-    * Relevance-rcov
-    * Git and GitHub
-    * RunCodeRun (see the build)
-    * Heroku
-    * Thanks to Railscasts.com, you rock!
+* Mac OSX 10.6.2
+* Ruby 1.8.7
+* Rails 2.3.5
+* RubyMine
+* Authlogic
+* CanCan
+* will_paginate
+* Gravatar
+* Formtastic
+* Compass
+* Sass
+* Bluecloth
+* Cucumber
+* Webrat
+* RSpec
+* Mocha
+* Relevance-rcov
+* Git and GitHub
+* RunCodeRun (see the build)
+* Heroku
+* Thanks to Railscasts.com, you rock!
 
