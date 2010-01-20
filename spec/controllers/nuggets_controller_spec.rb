@@ -10,11 +10,13 @@ describe NuggetsController do
   
   context "GET show" do
     before(:each) do
+      @nugget = mock
+      @nugget.stubs(:has_better_id?).returns(false)
       @params = {:id => 1}
     end
 
     it "should be successful" do
-      Nugget.stubs(:find).returns(mock)
+      Nugget.stubs(:find).returns(@nugget)
 
       get :show, @params
 
@@ -23,12 +25,11 @@ describe NuggetsController do
     end
 
     it "should load the nugget and assign it" do
-      nugget = mock
-      Nugget.expects(:find).with('1').returns(nugget)
+      Nugget.expects(:find).with('1').returns(@nugget)
 
       get :show, @params
 
-      assigns[:nugget].should == nugget
+      assigns[:nugget].should == @nugget
     end
   end
 
