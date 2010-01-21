@@ -26,4 +26,4 @@ Feature: Register an account
       | Andy Pike  | andy_pike  | someone@somewhere.com | secret   |                       | Password doesn't match confirmation             |
       | Andy Pike  | joe_bloggs | someone@somewhere.com | secret   | secret                | Username has already been taken                 |
       | Andy Pike  | andy_pike  | bo@selecta.com        | secret   | secret                | Email has already been taken                    |
-      | Andy Pike  | 123&£$ gdh | bo@selecta.com        | secret   | secret                | Username can only contain letters, numbers, underscores and hyphens. Must be between 3 and 16 characters long |
+      | Andy Pike  | 123&Â£$ gdh | bo@selecta.com        | secret   | secret                | Username can only contain letters, numbers, underscores and hyphens. Must be between 3 and 16 characters long |
