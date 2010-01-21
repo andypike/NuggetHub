@@ -78,7 +78,7 @@ describe User do
     end
 
     it "should raise an exception if the username contains characters other than letters, numbers, underscores and hyphens" do
-      @valid_attributes[:username] = 'ert&£:> blah'
+      @valid_attributes[:username] = 'ert&!@blah'
       lambda { User.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
     end
   end

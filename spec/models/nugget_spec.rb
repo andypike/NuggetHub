@@ -36,7 +36,7 @@ describe Nugget do
     end
 
     it "should create a new instance if the body is MAX_LENGTH characters in length" do
-      @valid_attributes[:body] = Array.new(Nugget.MAX_LENGTH, "X").to_s
+      @valid_attributes[:body] = Array.new(Nugget.MAX_LENGTH, "X").join
       Nugget.create!(@valid_attributes).should be_true
     end
   end
