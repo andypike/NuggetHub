@@ -10,6 +10,8 @@ Keep your nuggets safe for the next time you need them rather than trying to rem
 
 That's it! More features are coming all the time to enhance the site and make it more useful.
 
+You can see it running on heroku here: http://nuggethub.com
+
 **Why are you building NuggetHub?**
 
 Basically this is my first Ruby on Rails project and I wanted something to get my teeth into to learn all about RoR, the available Gems and all that jazz.
