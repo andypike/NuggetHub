@@ -31,7 +31,7 @@ describe Nugget do
     end
 
     it "should not create a new instance if the body is longer than the MAX_LENGTH characters" do
-      @valid_attributes[:body] = Array.new(Nugget.MAX_LENGTH + 1, "X").to_s
+      @valid_attributes[:body] = Array.new(Nugget.MAX_LENGTH + 1, "X").join
       lambda { Nugget.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
     end
 
