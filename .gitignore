@@ -3,4 +3,4 @@ log
 tmp
 rerun.txt
 .idea
-public/stylesheets/compiled
+public/stylesheets/compileddb/*.sqlite3
