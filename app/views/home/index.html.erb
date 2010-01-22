@@ -3,15 +3,7 @@
 <h1>Latest Nuggets</h1>
 <p><%= page_entries_info @nuggets %></p>
 <div id="nuggets-list">
-  <% @nuggets.each do |nugget| %>
-    <div class="nugget">
-      <%= gravatar_for nugget.user, :size => 42 %>
-      <div class="nugget-details">
-        <h3><%= link_to h(nugget.title), nugget_path(nugget) %></h3>
-        <div>Posted by <%=h nugget.user.username %> <%=h relative_date(nugget.updated_at) %></div>
-      </div>
-    </div>
-  <% end %>
+  <%= render :partial => 'nugget', :collection => @nuggets %>
 </div>
 
 <%= will_paginate @nuggets %>
