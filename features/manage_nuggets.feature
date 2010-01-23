@@ -21,5 +21,16 @@ Feature: Manage personal nuggets
     Then I should see "Your Nugget was successfully updated"
       And I should see "Just edited the title"
 
-    #TODO: Add check for user not logged in when trying to edit
-    #TODO: Add check for user logged in but not the owner when trying to edit
+  Scenario: Allow an admin user to edit any nugget
+    Given I am a logged in admin user
+      And there is a nugget entitled "Original title" with body "Original body"
+    When I follow "Edit"
+      And I fill in "Title" with "Just edited the title"
+      And I press "Save changes"
+    Then I should see "Your Nugget was successfully updated"
+      And I should see "Just edited the title"
+
+  Scenario: Do not allow an unauthenticated user edit a nugget
+    Given I am not a registered user
+      And there is a nugget entitled "Original title" with body "Original body"
+    Then I should not see "Edit"

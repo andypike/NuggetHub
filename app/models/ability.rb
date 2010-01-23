@@ -13,14 +13,15 @@ class Ability
         user && user == current_user
       end
 
-      #A logged in user can create nuggets
+      #Any logged in user can create nuggets
       can :create, Nugget do
         true
       end
 
-      #A user can only edit their own nuggets
+      #A normal user can only edit their own nuggets
+      #An admin user can edit any nugget
       can :update, Nugget do |nugget|
-        nugget && nugget.user == current_user
+        nugget && (nugget.user == current_user || current_user.is_admin)
       end
     end
   end
