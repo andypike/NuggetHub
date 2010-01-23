@@ -33,7 +33,9 @@ describe AccountController do
     context "a valid user" do
       before(:each) do
         @user.stubs(:full_name).returns('Andy Pike')
+        @user.stubs(:email).returns('blah@blah.com')
         @user.stubs(:save).returns(true)
+        Mail.stubs(:deliver_confirmation)
       end
 
       it "should save the user" do
@@ -49,6 +51,11 @@ describe AccountController do
       it "should redirect to root" do
         post :create
         response.should redirect_to(root_path)
+      end
+
+      it "should send a confirmation email" do
+        Mail.expects(:deliver_confirmation).with(@user.email, @user.full_name)
+        post :create
       end
     end
 
