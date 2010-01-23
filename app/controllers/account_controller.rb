@@ -7,6 +7,7 @@ class AccountController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
+      Mail.deliver_confirmation(@user.email, @user.full_name)
       flash[:notice] = "Hello #{@user.full_name}, welcome to NuggetHub."
       redirect_to root_url
     else

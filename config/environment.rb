@@ -27,6 +27,12 @@ Rails::Initializer.run do |config|
   config.gem "compass"
   config.gem "bluecloth"
   config.gem "friendly_id"
+  config.gem "postmark-rails"
+
+
+  require 'postmark-rails'
+  config.action_mailer.delivery_method = :postmark
+  config.action_mailer.postmark_api_key = "0e9190a2-9268-4a2a-95be-e25d6bdd6f96"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
