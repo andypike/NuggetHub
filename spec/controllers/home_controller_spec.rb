@@ -7,7 +7,11 @@ describe HomeController do
       get :index
 
       response.should be_success
-      response.should render_template("home/index.html.erb")
+    end
+
+    it "should render the correct template" do
+      get :index
+      response.should render_template('home/index.html.erb')
     end
 
     it "should get the latest posted nuggets by page" do

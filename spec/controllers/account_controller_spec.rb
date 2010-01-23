@@ -10,14 +10,16 @@ describe AccountController do
 
     it "should be successful" do
       get :new
-
       response.should be_success
-      response.should render_template("account/new.html.erb")
+    end
+
+    it "should render the correct template" do
+      get :new
+      response.should render_template('account/new.html.erb')
     end
 
     it "should assign a default User" do
       get :new
-
       assigns[:user].should == @user
     end
   end
@@ -25,25 +27,38 @@ describe AccountController do
   context 'POST create' do
     before(:each) do
       @user = mock()
-      User.expects(:new).returns @user
+      User.stubs(:new).returns @user
     end
 
-    it "should save a new user, set the flash message and redirect to the root url" do
-      @user.expects(:save).returns(true)
-      @user.expects(:full_name).returns("Andy Pike")
+    context "a valid user" do
+      before(:each) do
+        @user.stubs(:full_name).returns('Andy Pike')
+        @user.stubs(:save).returns(true)
+      end
 
-      post :create
+      it "should save the user" do
+        @user.expects(:save).returns(true)
+        post :create
+      end
 
-      flash[:notice].should == "Hello Andy Pike, welcome to NuggetHub."
-      response.should redirect_to(root_path)
+      it "should set the flash" do
+        post :create
+        flash[:notice].should =~ /Andy Pike/
+      end
+
+      it "should redirect to root" do
+        post :create
+        response.should redirect_to(root_path)
+      end
     end
 
-    it "should render the new action if the user fails to save" do
-      @user.expects(:save).returns(false)
+    context "with an invalid user" do
+      it "should render the new action" do
+        @user.stubs(:save).returns(false)
+        post :create
 
-      post :create
-
-      response.should render_template("account/new.html.erb")
+        response.should render_template("account/new.html.erb")
+      end
     end
   end
 
@@ -54,26 +69,29 @@ describe AccountController do
       @controller.stubs(:cannot?).returns(false)
     end
 
-    it "should be successful if a user is logged in" do
-      get :edit
+    context "with a logged in user" do
+      it "should be successful" do
+        get :edit
+        response.should be_success
+      end
 
-      response.should be_success
-      response.should render_template("account/edit.html.erb")
+      it "should render the correct template" do
+        get :edit
+        response.should render_template('account/edit.html.erb')
+      end
+
+      it "should assign the current user" do
+        get :edit
+        assigns[:user].should == @current_user
+      end
     end
 
-    it "should assign the current user if a user is logged in" do
-      get :edit
-
-      assigns[:user].should == @current_user
-    end
-
-    it "should fail if a user is not logged in" do
-      @controller.stubs(:cannot?).returns(true)
-
-      get :edit
-
-      response.should_not be_success
-      response.should_not render_template("account/edit.html.erb")
+    context "with anonymous users" do
+      it "should fail" do
+        @controller.stubs(:cannot?).returns(true)
+        get :edit
+        response.should_not be_success
+      end
     end
   end
 
@@ -83,37 +101,47 @@ describe AccountController do
       @params = { :user => mock() }
       @controller.stubs(:current_user).returns(@current_user)
       @controller.stubs(:cannot?).returns(false)
-    end
-
-    it "should update the current user's properties from those posted" do
-      @current_user.expects(:update_attributes).with(@params[:user]).returns(true)
-
-      post :update, @params
-    end
-
-    it "should add a success message to the flash and redirect back to the site root if the update was successful" do
-      @current_user.stubs(:update_attributes).with(@params[:user]).returns(true)
-
-      post :update, @params
-
-      flash[:notice].should == "Your account was successfully updated."
-      response.should redirect_to(root_path)
-    end
-
-    it "should render the edit action if the update fails" do
-      @current_user.stubs(:update_attributes).with(@params[:user]).returns(false)
-
-      post :update, @params
       
-      response.should render_template("account/edit.html.erb")
+      @current_user.stubs(:update_attributes).with(@params[:user]).returns(true)
     end
-    
-    it "should fail if a user is not logged in" do
-      @controller.stubs(:cannot?).returns(true)
 
+    def do_post
       post :update, @params
+    end
 
-      response.should_not be_success
+    context "with a logged in user" do
+      it "should update the current user's attributes" do
+        @current_user.expects(:update_attributes).with(@params[:user]).returns(true)
+        do_post
+      end
+
+      context "with a valid user" do
+        it "should add a success message to the flash" do
+          do_post
+          flash[:notice].should == "Your account was successfully updated."
+        end
+
+        it "should redirect back to the site root" do
+          do_post
+          response.should redirect_to(root_path)
+        end
+      end
+
+      context "with an invalid user" do
+        it "should render the edit template" do
+          @current_user.stubs(:update_attributes).with(@params[:user]).returns(false)
+          do_post
+          response.should render_template('account/edit.html.erb')
+        end
+      end
+    end
+
+    context "with an anonymous user" do
+      it "should fail" do
+        @controller.stubs(:cannot?).returns(true)
+        do_post
+        response.should_not be_success
+      end
     end
   end
 end
