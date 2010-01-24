@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/home/index" do
+describe "/nuggets/index" do
   before(:each) do
     activate_authlogic
     nugget = Nugget.new(:title => "Sample Nugget title", :user => User.new(:email => "someone@somewhere.com"), :updated_at => DateTime.new)
@@ -10,10 +10,10 @@ describe "/home/index" do
     template.stubs(:will_paginate).returns('')
   end
 
-  context "when displaying the homepage to an unauthenticated user" do
+  context "when displaying the nuggets list to an unauthenticated user" do
     before(:each) do
       template.stubs(:current_user).returns(nil)
-      render 'home/index', :layout => "application"
+      render 'nuggets/index', :layout => "application"
     end
 
     it "should show the site logo" do
@@ -25,7 +25,7 @@ describe "/home/index" do
     end
 
     it "should show the homepage title" do
-      response.should have_tag('title', 'Home :: NuggetHub - Social knowledge base')
+      response.should have_tag('title', 'Latest Nuggets :: NuggetHub - Social knowledge base')
     end
 
     it "should show a join image button" do
@@ -59,14 +59,14 @@ describe "/home/index" do
     end
   end
 
-  context "When displaying the homepage to an authenticated user" do
+  context "When displaying the nuggets list to an authenticated user" do
     before(:each) do
       current_user = User.new
       current_user.full_name = "Andy Pike"
       current_user.email = "an@email_address.com"
 
       template.expects(:current_user).returns(current_user).at_least_once
-      render 'home/index', :layout => "application"
+      render 'nuggets/index', :layout => "application"
     end
 
     it "should not show the join image button" do

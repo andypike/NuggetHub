@@ -7,7 +7,29 @@ describe NuggetsController do
     CanCan::ResourceAuthorization.stubs(:new).returns(authorization)
     authorization.expects(:load_and_authorize_resource)
   end
-  
+
+  context "GET index" do
+    it "should be successful" do
+      get :index
+
+      response.should be_success
+    end
+
+    it "should render the correct template" do
+      get :index
+      response.should render_template('nuggets/index.html.erb')
+    end
+
+    it "should get the latest posted nuggets by page" do
+      nuggets = mock
+      Nugget.expects(:paged_nuggets).with('1').returns(nuggets)
+
+      get :index, { :page => 1 }
+
+      assigns[:nuggets].should == nuggets
+    end
+  end
+
   context "GET show" do
     before(:each) do
       @nugget = mock

@@ -1,6 +1,15 @@
 class NuggetsController < ApplicationController
   load_and_authorize_resource  
 
+  def index
+    @nuggets = Nugget.paged_nuggets(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @nuggets }
+    end
+  end
+
   def show
     @nugget = Nugget.find(params[:id])
     redirect_to @nugget, :status => 301 if @nugget.has_better_id?
