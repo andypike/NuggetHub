@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "/nuggets/index" do
   before(:each) do
     activate_authlogic
-    nugget = Nugget.new(:title => "Sample Nugget title", :user => User.new(:email => "someone@somewhere.com"), :updated_at => DateTime.new)
+    nugget = Nugget.create!(:title => "Sample Nugget title", :body => "the body", :user => User.new(:email => "someone@somewhere.com"), :tag_list => "Computing,OSX")
     assigns[:nuggets] = [nugget]
     template.stubs(:nugget_path).with(nugget).returns('nuggets/1')
     template.stubs(:page_entries_info).returns('')
@@ -56,6 +56,11 @@ describe "/nuggets/index" do
 
     it "should show the latest nuggets gravatars" do
       response.should have_tag('div#nuggets-list img.gravatar')
+    end
+
+    it "should show the tags for each nugget" do
+      response.should have_tag('div.tag', 'Computing')
+      response.should have_tag('div.tag', 'OSX')
     end
   end
 

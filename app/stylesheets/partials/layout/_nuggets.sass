@@ -2,8 +2,8 @@ body.three-col
   .nugget:hover
     background-image: url(../../images/nugget-bg-hover.gif)
   .nugget
+    +clearfix
     background-image: url(../../images/nugget-bg.gif)
-    height: 55px
     padding: 10px
     margin-bottom: 10px
     border: solid 1px #a1b4c6
@@ -15,8 +15,17 @@ body.three-col
       margin-left: 10px
       h3
         display: inline
-      div
-        margin-top: 4px
+      .posted-by
+        clear: both
+  .tags
+    +clearfix
+    margin: 10px 0
+    .tag
+      float: left
+      padding: 5px 5px 5px 22px
+      background: #606378 url(../../images/tag.gif) no-repeat 4px 7px
+      margin-right: 5px
+      color: #d0d0d0
   .nugget-body
     font-size: 1.4em
     border: solid 1px #ccc
@@ -29,8 +38,10 @@ body.three-col
     pre
       margin: 10px
   .nugget-info
+    clear: both
     background: #ffffcc
     padding: 3px
+    margin-top: 10px
     .gravatar
       vertical-align: middle
       margin-right: 5px  

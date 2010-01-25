@@ -48,4 +48,15 @@ describe Nugget do
       Nugget.paged_nuggets(1)
     end
   end
+
+  context "When checking method generation" do
+    before(:each) do
+      @nugget = Nugget.new
+    end
+    
+    it "should generate a tag_list accessor/setter for each tag type" do
+      @nugget.should respond_to(:tag_list)
+      @nugget.should respond_to(:tag_list=)
+    end
+  end
 end

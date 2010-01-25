@@ -3,6 +3,8 @@
 <h1><%=h @nugget.title %></h1>
 <div class="nugget-body"><%=markdown @nugget.body %></div>
 
+<%= render :partial => 'tags', :locals => {:nugget => @nugget} %>
+
 <div class="nugget-info">
   <%= gravatar_for @nugget.user, :size => 32 %>
   By: <strong><%=h @nugget.user.username %></strong> When: <strong><%=h relative_date(@nugget.updated_at) %></strong>

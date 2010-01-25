@@ -28,7 +28,7 @@ Rails::Initializer.run do |config|
   config.gem "bluecloth"
   config.gem "friendly_id"
   config.gem "postmark-rails"
-
+  config.gem "acts-as-taggable-on"
 
   require 'postmark-rails'
   config.action_mailer.delivery_method = :postmark

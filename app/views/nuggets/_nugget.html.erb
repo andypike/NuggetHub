@@ -2,6 +2,7 @@
   <%= gravatar_for nugget.user, :size => 42 %>
   <div class="nugget-details">
     <h3><%= link_to h(nugget.title), nugget_path(nugget) %></h3>
-    <div>Posted by <%=h nugget.user.username %> <%=h relative_date(nugget.updated_at) %></div>
+    <%= render :partial => 'tags', :locals => { :nugget => nugget } %>
+    <div class="posted-by">Posted by <%=h nugget.user.username %> <%=h relative_date(nugget.updated_at) %></div>
   </div>
 </div>

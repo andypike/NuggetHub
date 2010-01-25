@@ -13,6 +13,7 @@ class Nugget < ActiveRecord::Base
   validates_length_of :body, :maximum => Nugget.MAX_LENGTH
 
   has_friendly_id :title, :use_slug => true
+  acts_as_taggable_on :tags
 
   def self.paged_nuggets(page)
     Nugget.paginate :page => page, :order => 'updated_at DESC'
