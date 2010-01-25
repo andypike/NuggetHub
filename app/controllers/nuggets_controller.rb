@@ -7,6 +7,7 @@ class NuggetsController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render :json => @nuggets }
+      format.xml { render :xml => @nuggets }
     end
   end
 
