@@ -285,6 +285,9 @@ body.three-col .nugget-form span#char-count {
   background: #ffff99;
   border: solid 1px #ffcc66;
   padding: 2px 7px; }
+/* line 45, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col .nugget-form .wmd-preview {
+  margin: 10px 0 20px 0; }
 
 /* line 1, ../../../app/stylesheets/partials/layout/_your-account.sass */
 .your-account form {

@@ -1,3 +1,8 @@
+<% content_for(:scripts) do %>
+    <script type="text/javascript"> wmd_options = {	output: "Markdown" } </script>
+    <%= javascript_include_tag 'wmd/wmd' %>
+<% end %>
+
 <% button_text = 'Post Nugget' if local_assigns[:button_text].nil? %>
 
 <div class="nugget-form">
@@ -10,9 +15,13 @@
     <p>
       <%= f.label :body %> <em>(You can format your Nugget using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">Markdown</a>)</em><br />
       <%= f.text_area :body %>
-      <em>Nuggets can only have a maximum of <%= Nugget.MAX_LENGTH %> characters so get to the point ;o)</em>
+      <em>Nuggets can only have a maximum of <strong><%= Nugget.MAX_LENGTH %></strong> characters so get to the point ;o)</em>
       <span id="char-count"><%= @nugget.body.size %> characters so far</span>
     </p>
+
+    <%= f.label 'Preview' %> <em>(This is how your nugget will look once posted)</em>
+    <div class="nugget-body wmd-preview"></div>
+
     <p>
       <%= f.submit button_text %>
     </p>

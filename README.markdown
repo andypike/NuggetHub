@@ -22,7 +22,7 @@ You can get updates on Twitter so feel free to get in touch.
 
 **I've got an idea for NuggetHub, what to hear it?**
 
-Sure do, take a look at the feedback tab on the left or jump over to the UserVoice forum where you can submit your ideas and vote on others.
+Sure do, take a look at the UserVoice forum http://nuggethub.uservoice.com where you can submit your ideas and vote on others. You can also ping us on Twitter @nuggethub
 
 **What have you used to create NuggetHub?**
 
@@ -36,6 +36,7 @@ Here is a quick list of the tech I've used, I'll try and keep this up-to-date:
 * CanCan
 * will_paginate
 * Gravatar
+* Postmark
 * Formtastic
 * Compass
 * Sass
@@ -46,7 +47,7 @@ Here is a quick list of the tech I've used, I'll try and keep this up-to-date:
 * Mocha
 * Relevance-rcov
 * Git and GitHub
-* RunCodeRun (see the build)
+* RunCodeRun
 * Heroku
 * Thanks to Railscasts.com, you rock!
 
