@@ -8,11 +8,7 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 require 'tasks/rails'
 
-task :statsetup do
-
-end
-
-task :runcoderun => ["db:test:clone", "spec:rcov", "cucumber"]
+task :runcoderun => ["gems:install", "db:test:clone", "spec:rcov", "cucumber"]
 task :local => ["spec:rcov", "cucumber"]
 
 task :default => "runcoderun"
