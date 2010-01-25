@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "/nuggets/index" do
   before(:each) do
     activate_authlogic
-    nugget = Nugget.create!(:title => "Sample Nugget title", :body => "the body", :user => User.new(:email => "someone@somewhere.com"), :tag_list => "Computing,OSX")
+    nugget = Nugget.create!(:title => "Sample Nugget title", :body => "the body", :user => User.new(:email => "someone@somewhere.com"), :tag_list => "Computing OSX")
     assigns[:nuggets] = [nugget]
     template.stubs(:nugget_path).with(nugget).returns('nuggets/1')
     template.stubs(:page_entries_info).returns('')

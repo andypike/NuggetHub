@@ -19,7 +19,7 @@
       <span id="char-count"><%= @nugget.body.size %> characters so far</span>
     </p>
     <p>
-      <%= f.label :tag_list %> <em>(Enter a list of tags separated by commas)</em><br />
+      <%= f.label :tag_list %> <em>(Enter a list of tags separated by spaces. For multi-word tags use hyphens.)</em><br />
       <%= f.text_field :tag_list %>
     </p>
     <%= f.label 'Preview' %> <em>(This is how your nugget will look once posted)</em>

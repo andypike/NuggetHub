@@ -8,7 +8,7 @@ Feature: Manage personal nuggets
     When I follow "Add a Nugget"
       And I fill in "Title" with "How to close an application on OSX"
       And I fill in "Body" with "CMD-Q"
-      And I fill in "Tag list" with "Computing,Mac,OSX"
+      And I fill in "Tag list" with "Computing Mac OSX"
       And I press "Post Nugget"
     Then I should see "Your Nugget was successfully posted"
       And I should see "How to close an application on OSX"
