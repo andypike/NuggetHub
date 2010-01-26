@@ -3,6 +3,7 @@ class NuggetsController < ApplicationController
 
   def index
     @nuggets = Nugget.paged_nuggets(params[:page])
+    @tags = Nugget.tag_counts_on(:tags)
 
     respond_to do |format|
       format.html

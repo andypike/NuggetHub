@@ -28,6 +28,14 @@ describe NuggetsController do
 
       assigns[:nuggets].should == nuggets
     end
+
+    it "should get tag counts for all nuggets" do
+      tags = mock
+      Nugget.expects(:tag_counts_on).with(:tags).returns(tags)
+      
+      get :index
+      assigns[:tags].should == tags
+    end
   end
 
   context "GET show" do

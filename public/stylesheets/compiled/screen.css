@@ -184,13 +184,18 @@ body.three-col #sidebar {
     margin-top: 10px; }
   /* line 9, ../../../app/stylesheets/partials/layout/_sidebar.sass */
   body.three-col #sidebar .sidebar-body {
+    overflow: hidden;
+    display: inline-block;
     background: #eaeaea url(../../images/sidebar-bottom.gif) no-repeat 0 bottom;
     padding: 0 15px 20px 15px; }
-    /* line 12, ../../../app/stylesheets/partials/layout/_sidebar.sass */
+    /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+    body.three-col #sidebar .sidebar-body {
+      display: block; }
+    /* line 13, ../../../app/stylesheets/partials/layout/_sidebar.sass */
     body.three-col #sidebar .sidebar-body .gravatar {
       vertical-align: middle;
       margin-right: 5px; }
-    /* line 15, ../../../app/stylesheets/partials/layout/_sidebar.sass */
+    /* line 16, ../../../app/stylesheets/partials/layout/_sidebar.sass */
     body.three-col #sidebar .sidebar-body .current-user {
       color: #373957;
       font-size: 1.2em;
@@ -276,17 +281,17 @@ body.three-col .nugget {
 body.three-col .tags {
   overflow: hidden;
   display: inline-block;
-  margin: 10px 0; }
+  margin: 10px 0 5px 0; }
   /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.three-col .tags {
     display: block; }
-  /* line 30, ../../../app/stylesheets/partials/layout/_nuggets.sass */
-  body.three-col .tags .tag {
-    float: left;
-    padding: 5px 5px 5px 22px;
-    background: #606378 url(../../images/tag.gif) no-repeat 4px 7px;
-    margin-right: 5px;
-    color: #d0d0d0; }
+/* line 30, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col .tag {
+  float: left;
+  padding: 5px 5px 5px 22px;
+  background: #606378 url(../../images/tag.gif) no-repeat 4px 7px;
+  margin: 0 5px 5px 0;
+  color: #d0d0d0; }
 /* line 36, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-body {
   font-size: 1.4em;

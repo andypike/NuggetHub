@@ -54,6 +54,17 @@
             <%= link_to image_tag('buttons/join.gif'), new_account_path  %>
           <% end %>
         </div>
+
+        <% if @tags %>
+        <div class="sidebar-top"></div>
+        <div class="sidebar-body">
+            <h2>Tags</h2>
+            <% @tags.each do |tag| %>
+                <div class="tag"><%=h tag.name %> x <%=h tag.count %></div>
+            <% end %>
+        </div>
+        <% end %>
+
       </div>
 
       <div id="footer">
