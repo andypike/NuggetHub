@@ -231,9 +231,23 @@ body.three-col #content {
     background: #fff url(../../images/content-bottom.gif) no-repeat 0 bottom; }
 
 /* line 2, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+body.three-col #nugget-header {
+  overflow: hidden;
+  display: inline-block; }
+  /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+  body.three-col #nugget-header {
+    display: block; }
+  /* line 4, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  body.three-col #nugget-header h1 {
+    width: 580px;
+    float: left; }
+  /* line 7, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  body.three-col #nugget-header .tweetmeme {
+    float: right; }
+/* line 9, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget:hover {
   background-image: url(../../images/nugget-bg-hover.gif); }
-/* line 4, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 11, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget {
   overflow: hidden;
   display: inline-block;
@@ -244,21 +258,21 @@ body.three-col .nugget {
   /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.three-col .nugget {
     display: block; }
-  /* line 10, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 17, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget .gravatar {
     float: left; }
-  /* line 12, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 19, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget .nugget-details {
     width: 560px;
     float: left;
     margin-left: 10px; }
-    /* line 16, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+    /* line 23, ../../../app/stylesheets/partials/layout/_nuggets.sass */
     body.three-col .nugget .nugget-details h3 {
       display: inline; }
-    /* line 18, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+    /* line 25, ../../../app/stylesheets/partials/layout/_nuggets.sass */
     body.three-col .nugget .nugget-details .posted-by {
       clear: both; }
-/* line 20, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 27, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .tags {
   overflow: hidden;
   display: inline-block;
@@ -266,47 +280,47 @@ body.three-col .tags {
   /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.three-col .tags {
     display: block; }
-  /* line 23, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 30, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .tags .tag {
     float: left;
     padding: 5px 5px 5px 22px;
     background: #606378 url(../../images/tag.gif) no-repeat 4px 7px;
     margin-right: 5px;
     color: #d0d0d0; }
-/* line 29, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 36, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-body {
   font-size: 1.4em;
   border: solid 1px #ccc;
   padding: 5px;
   margin-bottom: 10px;
   background: #efefef; }
-  /* line 35, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 42, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-body p, body.three-col .nugget-body ul, body.three-col .nugget-body code {
     margin-bottom: 5px;
     font-size: 0.8em; }
-  /* line 38, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 45, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-body pre {
     margin: 10px; }
-/* line 40, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 47, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-info {
   clear: both;
   background: #ffffcc;
   padding: 3px;
   margin-top: 10px; }
-  /* line 45, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 52, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-info .gravatar {
     vertical-align: middle;
     margin-right: 5px; }
-/* line 49, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 56, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form textarea, body.three-col .nugget-form input.title {
   width: 600px; }
-/* line 51, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 58, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form span#char-count {
   margin-left: 55px;
   background: #ffff99;
   border: solid 1px #ffcc66;
   padding: 2px 7px; }
-/* line 56, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 63, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form .wmd-preview {
   margin: 10px 0 20px 0; }
 
