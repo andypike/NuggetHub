@@ -1,4 +1,4 @@
 <div class="tag">
-    <%= link_to tag.name, "/tags/#{CGI::escape(tag.name).gsub(".", "%2E")}" %>
+    <%= link_to tag.name, tag_path(tag) %>
 </div>
 
