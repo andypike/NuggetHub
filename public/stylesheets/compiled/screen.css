@@ -290,42 +290,48 @@ body.three-col .tag {
   float: left;
   padding: 5px 5px 5px 22px;
   background: #606378 url(../../images/tag.gif) no-repeat 4px 7px;
-  margin: 0 5px 5px 0;
-  color: #d0d0d0; }
-/* line 36, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  margin: 0 5px 5px 0; }
+  /* line 35, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  body.three-col .tag a, body.three-col .tag a:visited {
+    color: #d0d0d0;
+    text-decoration: none; }
+  /* line 38, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  body.three-col .tag a:hover {
+    color: #fff; }
+/* line 40, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-body {
   font-size: 1.4em;
   border: solid 1px #ccc;
   padding: 5px;
   margin-bottom: 10px;
   background: #efefef; }
-  /* line 42, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 46, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-body p, body.three-col .nugget-body ul, body.three-col .nugget-body code {
     margin-bottom: 5px;
     font-size: 0.8em; }
-  /* line 45, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 49, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-body pre {
     margin: 10px; }
-/* line 47, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 51, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-info {
   clear: both;
   background: #ffffcc;
   padding: 3px;
   margin-top: 10px; }
-  /* line 52, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 56, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-info .gravatar {
     vertical-align: middle;
     margin-right: 5px; }
-/* line 56, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 60, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form textarea, body.three-col .nugget-form input.title {
   width: 600px; }
-/* line 58, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 62, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form span#char-count {
   margin-left: 55px;
   background: #ffff99;
   border: solid 1px #ffcc66;
   padding: 2px 7px; }
-/* line 63, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 67, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form .wmd-preview {
   margin: 10px 0 20px 0; }
 

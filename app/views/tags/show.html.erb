@@ -1,0 +1,12 @@
+<% content_for(:title) do %> <%=h @tag_name%> Nuggets <% end %>
+
+<h1><%=h @tag_name%> Nuggets</h1>
+<% if @tagged_nuggets.size > 0 %>
+    <div id="nuggets-list">
+        <%= render :partial => 'shared/nugget', :collection => @tagged_nuggets %>
+    </div>
+<% else %>
+    <p>There are no Nuggets tagged with <strong><%=h @tag_name%></strong></p>
+<% end %>
+
+

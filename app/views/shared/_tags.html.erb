@@ -1,5 +1,5 @@
 <div class="tags">
   <% nugget.tags.each do |tag| %>
-      <div class="tag"><%=h tag.name %></div>
+      <%= render :partial => 'shared/tag', :locals => {:tag => tag} %>
   <% end %>
 </div>

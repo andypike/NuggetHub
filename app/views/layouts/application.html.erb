@@ -60,7 +60,7 @@
         <div class="sidebar-body">
             <h2>Tags</h2>
             <% @tags.each do |tag| %>
-                <div class="tag"><%=h tag.name %> x <%=h tag.count %></div>
+                <%= render :partial => 'shared/tag', :locals => {:tag => tag} %>
             <% end %>
         </div>
         <% end %>
