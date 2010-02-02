@@ -72,4 +72,16 @@ describe Ability do
       ability.can?(:update, @nugget).should be_true
     end
   end
+
+  context "When checking a user's ability to add comments to a nugget" do
+    it "should not allow a non-logged in user to create comments" do
+      ability = Ability.new(nil)
+      ability.can?(:create, Comment).should be_false
+    end
+    
+    it "should allow a logged in user to create comments" do
+      ability = Ability.new(User.new)
+      ability.can?(:create, Comment).should be_true
+    end
+  end
 end

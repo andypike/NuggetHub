@@ -18,6 +18,11 @@ class Ability
         true
       end
 
+      #Any logged in user can create comments
+      can :create, Comment do
+        true
+      end
+
       #A normal user can only edit their own nuggets
       #An admin user can edit any nugget
       can :update, Nugget do |nugget|

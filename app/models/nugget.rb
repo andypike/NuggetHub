@@ -8,6 +8,7 @@ class Nugget < ActiveRecord::Base
   end
 
   belongs_to :user
+  has_many :comments
 
   validates_presence_of :title, :body, :user
   validates_length_of :body, :maximum => Nugget.MAX_LENGTH

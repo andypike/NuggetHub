@@ -15,8 +15,9 @@ ActionController::Routing::Routes.draw do |map|
   #   map.resources :products
   map.resources :account
   map.resources :user_sessions
-  map.resources :nuggets
+  map.resources :nuggets, :has_many => :comments
   map.resources :tags
+  #map.resources :comments
   
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }

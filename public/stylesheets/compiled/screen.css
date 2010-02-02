@@ -359,6 +359,17 @@ body.bp .pagination {
     color: #fff;
     text-decoration: none; }
 
+/* line 2, ../../../app/stylesheets/partials/layout/_comments.sass */
+body.three-col .comments {
+  margin: 20px 0 0 50px; }
+  /* line 4, ../../../app/stylesheets/partials/layout/_comments.sass */
+  body.three-col .comments .comment {
+    border: solid 1px red;
+    margin-bottom: 10px; }
+  /* line 7, ../../../app/stylesheets/partials/layout/_comments.sass */
+  body.three-col .comments form {
+    margin-top: 20px; }
+
 /* line 22, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 body.bp {
   line-height: 1.5;
@@ -527,19 +538,24 @@ body.bp {
   body.bp .loud {
     color: #111111; }
 
-/* line 11, ../../../app/stylesheets/partials/_layout.sass */
+/* line 12, ../../../app/stylesheets/partials/_layout.sass */
 body.bp {
   background: #313233; }
-  /* line 13, ../../../app/stylesheets/partials/_layout.sass */
+  /* line 14, ../../../app/stylesheets/partials/_layout.sass */
   body.bp em {
     color: #aaa; }
-  /* line 15, ../../../app/stylesheets/partials/_layout.sass */
+  /* line 16, ../../../app/stylesheets/partials/_layout.sass */
   body.bp h1 {
     color: #383958;
     font-size: 2em;
     font-family: Trebuchet MS,Helvetica Neue,Arial,Helvetica,sans-serif; }
+  /* line 20, ../../../app/stylesheets/partials/_layout.sass */
+  body.bp h2 {
+    color: #383958;
+    font-size: 1.6em;
+    font-family: Trebuchet MS,Helvetica Neue,Arial,Helvetica,sans-serif; }
 
-/* line 21, ../../../app/stylesheets/partials/_layout.sass */
+/* line 25, ../../../app/stylesheets/partials/_layout.sass */
 body.three-col #container {
   width: 950px;
   margin: 0 auto;
@@ -548,6 +564,6 @@ body.three-col #container {
   /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.three-col #container {
     display: block; }
-/* line 24, ../../../app/stylesheets/partials/_layout.sass */
+/* line 28, ../../../app/stylesheets/partials/_layout.sass */
 body.three-col .last-vertical-block {
   margin-bottom: 0; }

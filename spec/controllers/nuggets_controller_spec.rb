@@ -61,6 +61,15 @@ describe NuggetsController do
 
       assigns[:nugget].should == @nugget
     end
+
+    it "should assign a default comment ready for adding" do
+      comment = mock
+      Nugget.stubs(:find).returns(@nugget)
+      Comment.expects(:new).returns(comment)
+
+      get :show, @params
+      assigns[:comment].should == comment
+    end
   end
 
   context "GET new" do

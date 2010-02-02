@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100125211702) do
+ActiveRecord::Schema.define(:version => 20100131194445) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "text",       :null => false
+    t.integer  "nugget_id",  :null => false
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "nuggets", :force => true do |t|
     t.string   "title"
