@@ -2,7 +2,23 @@ body.three-col
   .comments
     margin: 20px 0 0 50px
     .comment
-      border: solid 1px red
-      margin-bottom: 10px
+      +clearfix
+      margin-bottom: 15px
+      background: url(../../images/comment-arrow.gif) no-repeat 40px 0px
+      p
+        border: solid 2px #d0d0d0
+        background: #efefef
+        float: left
+        margin: 0 0 0 22px
+        padding: 10px
+        width: 500px
+      img.gravatar
+        float: left
+      .comment-info
+        padding: 3px
+        clear: both
+        margin-left: 55px
     form
-      margin-top: 20px
+      margin: 20px 0 0 55px
+      textarea
+        width: 500px

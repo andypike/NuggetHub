@@ -8,7 +8,7 @@ class Nugget < ActiveRecord::Base
   end
 
   belongs_to :user
-  has_many :comments
+  has_many :comments, :order => 'updated_at ASC'
 
   validates_presence_of :title, :body, :user
   validates_length_of :body, :maximum => Nugget.MAX_LENGTH

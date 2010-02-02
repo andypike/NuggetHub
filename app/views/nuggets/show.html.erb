@@ -22,14 +22,14 @@
 
 
 <div class="comments">
-  <h2>Comments</h2>
+  <h2><%= @nugget.comments.size %> Comments</h2>
 
   <% if @nugget.comments.size > 0 %>
       <% @nugget.comments.each do |comment| %>
         <div class="comment">
           <%= gravatar_for comment.user, :size => 32 %>
           <p><%=h comment.text %></p>
-          <%= render :partial => 'shared/model_with_user_details', :locals => { :model => comment } %>
+          <div class="comment-info"><%= render :partial => 'shared/model_with_user_details', :locals => { :model => comment } %></div>
         </div>
       <% end %>
   <% else %>

@@ -364,11 +364,35 @@ body.three-col .comments {
   margin: 20px 0 0 50px; }
   /* line 4, ../../../app/stylesheets/partials/layout/_comments.sass */
   body.three-col .comments .comment {
-    border: solid 1px red;
-    margin-bottom: 10px; }
-  /* line 7, ../../../app/stylesheets/partials/layout/_comments.sass */
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 15px;
+    background: url(../../images/comment-arrow.gif) no-repeat 40px 0px; }
+    /* line 5, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+    body.three-col .comments .comment {
+      display: block; }
+    /* line 8, ../../../app/stylesheets/partials/layout/_comments.sass */
+    body.three-col .comments .comment p {
+      border: solid 2px #d0d0d0;
+      background: #efefef;
+      float: left;
+      margin: 0 0 0 22px;
+      padding: 10px;
+      width: 500px; }
+    /* line 15, ../../../app/stylesheets/partials/layout/_comments.sass */
+    body.three-col .comments .comment img.gravatar {
+      float: left; }
+    /* line 17, ../../../app/stylesheets/partials/layout/_comments.sass */
+    body.three-col .comments .comment .comment-info {
+      padding: 3px;
+      clear: both;
+      margin-left: 55px; }
+  /* line 21, ../../../app/stylesheets/partials/layout/_comments.sass */
   body.three-col .comments form {
-    margin-top: 20px; }
+    margin: 20px 0 0 55px; }
+    /* line 23, ../../../app/stylesheets/partials/layout/_comments.sass */
+    body.three-col .comments form textarea {
+      width: 500px; }
 
 /* line 22, ../../../../../../.gem/ruby/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 body.bp {
