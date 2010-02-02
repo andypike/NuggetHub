@@ -8,7 +8,7 @@ describe "/nuggets/show" do
     assigns[:nugget] = @nugget
     assigns[:comment] = Comment.new
 
-    @comments = [Comment.new(:text => 'This is a comment', :nugget => @nugget, :user => user)]
+    @comments = [Comment.new(:text => 'This is a comment', :nugget => @nugget, :user => user, :updated_at => Date.new)]
   end
 
   context "When displaying the show nugget page" do
@@ -53,7 +53,7 @@ describe "/nuggets/show" do
     end
 
     it "should show a list of comments" do
-      @nugget.expects(:comments).returns(@comments)
+      @nugget.expects(:comments).returns(@comments).at_least_once
 
       render 'nuggets/show'
 
