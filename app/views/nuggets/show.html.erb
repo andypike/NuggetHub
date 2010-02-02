@@ -1,5 +1,10 @@
 <% content_for(:title) do %> <%=h @nugget.title %> <% end %>
 
+<% content_for(:scripts) do %>
+    <script type="text/javascript"> wmd_options = {	output: "Markdown" } </script>
+    <%= javascript_include_tag 'wmd/wmd' %>
+<% end %>
+
 <div id="nugget-header">
     <h1><%=h @nugget.title %></h1>
     <div class="tweetmeme"><script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script></div>
@@ -28,7 +33,7 @@
       <% @nugget.comments.each do |comment| %>
         <div class="comment">
           <%= gravatar_for comment.user, :size => 32 %>
-          <p><%=h comment.text %></p>
+          <div class="comment-markdown"><%=markdown comment.text %></div>
           <div class="comment-info"><%= render :partial => 'shared/model_with_user_details', :locals => { :model => comment } %></div>
         </div>
       <% end %>
