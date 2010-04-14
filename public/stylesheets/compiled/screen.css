@@ -306,32 +306,41 @@ body.three-col .nugget-body {
   margin-bottom: 10px;
   background: #efefef; }
   /* line 46, ../../../app/stylesheets/partials/layout/_nuggets.sass */
-  body.three-col .nugget-body p, body.three-col .nugget-body ul, body.three-col .nugget-body code {
+  body.three-col .nugget-body p, body.three-col .nugget-body ul {
     margin-bottom: 5px;
     font-size: 0.8em; }
   /* line 49, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  body.three-col .nugget-body code {
+    font: 12px courier,monospace; }
+  /* line 51, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-body pre {
-    margin: 10px; }
-/* line 51, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+    margin: 10px;
+    padding: 10px;
+    background: #111;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    color: #00ff00; }
+/* line 59, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-info {
   clear: both;
   background: #ffffcc;
   padding: 3px;
   margin-top: 10px; }
-  /* line 56, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+  /* line 64, ../../../app/stylesheets/partials/layout/_nuggets.sass */
   body.three-col .nugget-info .gravatar {
     vertical-align: middle;
     margin-right: 5px; }
-/* line 60, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 68, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form textarea, body.three-col .nugget-form input.title {
   width: 600px; }
-/* line 62, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 70, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form span#char-count {
   margin-left: 55px;
   background: #ffff99;
   border: solid 1px #ffcc66;
   padding: 2px 7px; }
-/* line 67, ../../../app/stylesheets/partials/layout/_nuggets.sass */
+/* line 75, ../../../app/stylesheets/partials/layout/_nuggets.sass */
 body.three-col .nugget-form .wmd-preview {
   margin: 10px 0 20px 0; }
 
