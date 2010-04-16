@@ -3,6 +3,6 @@
   <div class="nugget-details">
     <h3><%= link_to h(nugget.title), nugget_path(nugget) %></h3>
     <%= render :partial => 'shared/tags', :locals => { :nugget => nugget } %>
-    <div class="posted-by">Posted by <%=h nugget.user.username %> <%=h relative_date(nugget.updated_at) %></div>
+    <div class="posted-by">Posted by <%=h nugget.user.display_name %> <%=h relative_date(nugget.updated_at) %></div>
   </div>
 </div>

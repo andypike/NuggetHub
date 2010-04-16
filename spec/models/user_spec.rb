@@ -82,4 +82,21 @@ describe User do
       lambda { User.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
     end
   end
+
+  context "When getting the user's display name" do
+    it "should show their username if a Twitter name is not present" do
+      user = User.new({ :username => "andypike", :twitter_name => nil })
+      user.display_name.should == "andypike"
+    end
+
+    it "should show their Twitter name if one is present" do
+      user = User.new({ :username => "andypike", :twitter_name => "my-twitter-name" })
+      user.display_name.should == "@my-twitter-name"
+    end
+
+    it "should only show one @ if their Twitter name is present" do
+      user = User.new({ :username => "andypike", :twitter_name => "@my-twitter-name" })
+      user.display_name.should == "@my-twitter-name"
+    end
+  end
 end

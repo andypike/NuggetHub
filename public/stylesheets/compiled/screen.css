@@ -388,18 +388,30 @@ body.three-col .comments {
       margin: 0 0 0 22px;
       padding: 10px;
       width: 500px; }
-    /* line 15, ../../../app/stylesheets/partials/layout/_comments.sass */
+      /* line 15, ../../../app/stylesheets/partials/layout/_comments.sass */
+      body.three-col .comments .comment .comment-markdown code {
+        font: 12px courier,monospace; }
+      /* line 17, ../../../app/stylesheets/partials/layout/_comments.sass */
+      body.three-col .comments .comment .comment-markdown pre {
+        margin: 10px;
+        padding: 10px;
+        background: #111;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        color: #00ff00; }
+    /* line 25, ../../../app/stylesheets/partials/layout/_comments.sass */
     body.three-col .comments .comment img.gravatar {
       float: left; }
-    /* line 17, ../../../app/stylesheets/partials/layout/_comments.sass */
+    /* line 27, ../../../app/stylesheets/partials/layout/_comments.sass */
     body.three-col .comments .comment .comment-info {
       padding: 3px;
       clear: both;
       margin-left: 55px; }
-  /* line 21, ../../../app/stylesheets/partials/layout/_comments.sass */
+  /* line 31, ../../../app/stylesheets/partials/layout/_comments.sass */
   body.three-col .comments form {
     margin: 20px 0 0 55px; }
-    /* line 23, ../../../app/stylesheets/partials/layout/_comments.sass */
+    /* line 33, ../../../app/stylesheets/partials/layout/_comments.sass */
     body.three-col .comments form textarea {
       width: 500px; }
 

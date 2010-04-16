@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100131194445) do
+ActiveRecord::Schema.define(:version => 20100416212946) do
 
   create_table "comments", :force => true do |t|
     t.text     "text",       :null => false
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20100131194445) do
     t.integer  "failed_login_count", :default => 0,     :null => false
     t.datetime "current_login_at"
     t.boolean  "is_admin",           :default => false, :null => false
+    t.string   "twitter_name"
   end
 
 end
