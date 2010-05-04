@@ -2,8 +2,9 @@
 
 <h1>Latest Nuggets</h1>
 <p><%= page_entries_info @nuggets %></p>
+
+<%= will_paginate @nuggets %>
 <div id="nuggets-list">
   <%= render :partial => 'shared/nugget', :collection => @nuggets %>
 </div>
-
 <%= will_paginate @nuggets %>
